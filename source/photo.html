@@ -14,7 +14,7 @@
          <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-            <li class="main-nav__item--active"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
             <li class="main-nav__item"><a href="" class="main-nav__link">Конкурс</a></li>
             <li class="main-nav__item"><a href="" class="main-nav__link">Html Academy</a></li>
           </ul>
@@ -180,14 +180,41 @@
             </div>
             <div class="photo-editor__controls">
               <div class="photo-editor__filters">
-                <button class="photo-editor__btn photo-editor__btn--active photo-editor__filter--crop" type="button" aria-label="Обрезка фотографии"><svg></svg></button>
-                <button class="photo-editor__btn photo-editor__filter--saturate" type="button" aria-label="Насыщенность фотографии"><svg></svg></button>
-                <button class="photo-editor__btn photo-editor__filter--bright" type="button" aria-label="Яркость фотографии"><svg></svg></button>
+                <div class="photo-editor__filter photo-editor__filter--crop">
+                  <button class="photo-editor__btn photo-editor__btn--active photo-editor__btn--crop" type="button" aria-label="Обрезка фотографии"><svg></svg></button>
+                  <div class="photo-editor__bar photo-editor__bar--crop">
+                    <button class="photo-editor__thumb photo-editor__thumb--crop" id="thumb_btn_crop" type="button" aria-label="Ползунок кадрирования"></button>
+                    <!--<div class="photo-editor__scale" id="scale-active"></div>-->
+                  </div>
+                </div>
+                <div class="photo-editor__filter photo-editor__filter--saturate">
+                  <button class="photo-editor__btn photo-editor__btn--saturate" type="button" aria-label="Насыщенность фотографии"><svg></svg></button>
+                  <div class="photo-editor__bar photo-editor__bar--saturate">
+                    <button class="photo-editor__thumb photo-editor__thumb--saturate" id="thumb_btn_satur" type="button" aria-label="Ползунок насыщенности"></button>
+                    <!--<div class="photo-editor__scale" id="scale-active"></div>-->
+                  </div>
+                </div>
+                <div class="photo-editor__filter photo-editor__filter--bright">
+                  <button class="photo-editor__btn photo-editor__btn--bright" type="button" aria-label="Яркость фотографии"><svg></svg></button>
+                  <div class="photo-editor__bar photo-editor__bar--bright">
+                    <button class="photo-editor__thumb photo-editor__thumb--bright" id="thumb_btn_bright" type="button" aria-label="Ползунок яркости"></button>
+                    <!--<div class="photo-editor__scale" id="scale-active"></div>-->
+                  </div>
+                </div>
               </div>
-              <div class="photo-editor__bar photo-editor__bar--all">
-                <button class="photo-editor__thumb" id="thumb_btn" type="button" aria-label="Ползунок фильтра"></button>
-                <!--<div class="photo-editor__scale" id="scale-active"></div>-->
-              </div>
+
+              <!--<div class="photo-editor__bar-wrapper">
+                <div class="photo-editor__bar photo-editor__bar--crop photo-editor__bar--active">
+                  <button class="photo-editor__thumb photo-editor__thumb--crop" id="thumb_btn_crop" type="button" aria-label="Ползунок кадрирования"></button>
+                </div>
+                <div class="photo-editor__bar photo-editor__bar--saturate">
+                  <button class="photo-editor__thumb photo-editor__thumb--saturate" id="thumb_btn_satur" type="button" aria-label="Ползунок насыщенности"></button>
+                </div>
+                <div class="photo-editor__bar photo-editor__bar--bright">
+                  <button class="photo-editor__thumb photo-editor__thumb--bright" id="thumb_btn_bright" type="button" aria-label="Ползунок яркости"></button>
+                </div>
+              </div>-->
+
             </div>
             <div class="photo-editor__upl-btns">
               <button class="photo-editor__upl-btn btn btn--round" id="btn_upl" type="submit" aria-label="Загрузить фотографию"></button>
