@@ -1,0 +1,149 @@
+.questionnaire {
+  padding-top: 45px;
+  color: @dark-blue;
+  background-color: @white;
+}
+
+.questionnaire__description {
+  .mar-pad-reset();
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.questionnaire__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questionnaire__col {
+  .mar-pad-reset();
+  border: none;
+
+  &--white {
+    background-color: @white;
+  }
+
+  &--gray {
+    background-color: @gray-white;
+  }
+}
+
+.questionnaire__item-tittle {
+  font-size: 14px;
+  line-height: 18px;
+  color: @pink;
+}
+
+.questionnaire__group {
+  margin-bottom: 20px;
+}
+
+.questionnaire__text-label {
+  display: inline-block;
+  margin-left: 23px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.questionnaire__field,
+.questionnaire__area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 63px;
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark-blue;
+  border: 2px solid @dark-gray;
+  border-radius: 2px;
+}
+
+.questionnaire__area {
+  min-height: 201px;
+}
+
+.questionnaire__field:hover,
+.questionnaire__area:hover {
+	border-color: @dark-blue;
+}
+
+.questionnaire__field:focus,
+.questionnaire__area:focus {
+	outline: none;
+	border-color: @pink;
+}
+
+.questionnaire__list {
+  .list-reset();
+}
+
+.questionnaire__option {
+  margin-bottom: 50px;
+  padding-left: 67px;
+}
+
+.questionnaire__option:last-child {
+	margin-bottom: 0;
+}
+
+.questionnaire__label {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark-blue;
+}
+
+.questionnaire-input + label:before {
+  content: "";
+  position: absolute;
+  left: -67px;
+  top: 50%;
+  width: 39px;
+  height: 39px;
+  transform: translateY(-50%);
+  border: 2px solid @dark-gray;
+}
+
+.questionnaire-input-radio + label:before {
+  border-radius: 50%;
+}
+
+.questionnaire-input:hover + label:before {
+  border-color: @dark-blue;
+}
+
+.questionnaire-input:focus + label:before {
+  border-color: @pink;
+}
+
+.questionnaire__btn {
+  background-color: @green;
+
+  &:hover,
+  &:focus {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    color: rgba(1, 1, 1, 0.3);
+  }
+
+  &:disabled {
+    background-color: @dark-gray;
+  }
+}
+
+.questionnaire__legend {
+  color: @dark-blue;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.questionnaire__star-symbol {
+  color: @pink;
+}
