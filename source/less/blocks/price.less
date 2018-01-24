@@ -1,0 +1,67 @@
+.price {
+  background-color: @gray-white;
+}
+
+.price__list {
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+
+.price__item,
+.price__header-item {
+  width: 276px;
+  border: 2px solid @dark-gray;
+}
+
+.price_item {
+  display: flex;
+  justify-content: space-between;
+}
+.price__header-item {
+  color: @white;
+  background-color: @dark-blue;
+}
+
+.price__name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.price__cost {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price__flag {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price__item-name {
+  width: 70%;
+  font-size: 14px;
+  line-height: 30px;
+  color: @dark-blue;
+}
+
+.price__avaible {
+  width: 31px;
+  height: 31px;
+  text-align: center;
+  vertical-align: middle;
+  //background-position: center;
+  //background-repeat: no-repeat;
+
+  &--yes svg {
+    //background-image: url("../../img/icon-yes.svg");
+    fill: @btn-yes;
+  }
+
+  &--no {
+    //background-image: url("../../img/icon-no.svg");
+    fill: @btn-no;
+  }
+}

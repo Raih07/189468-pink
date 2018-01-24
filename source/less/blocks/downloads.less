@@ -1,0 +1,43 @@
+.downloads {
+  text-align: center;
+
+}
+
+.downloads__btn {
+  border-color: @white;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.downloads__app-link {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--ios {
+    background-image: url("../../img/logo-apple.svg");
+  }
+  &--android {
+    background-image: url("../../img/logo-android.svg");
+  }
+  &--win {
+    background-image: url("../../img/logo-microsoft.svg");
+  }
+}
+
+.downloads__descript {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 300;
+  color: @white;
+}
