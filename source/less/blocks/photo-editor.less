@@ -1,0 +1,117 @@
+.photo-editor {
+  background-color: @gray-white;
+  padding-top: 20px;
+}
+
+.photo-editor__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-editor__picture {
+  margin-bottom: 42px;
+}
+
+.photo-editor__controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-editor__filters {
+  display: flex;
+  align-items: center;
+}
+
+.photo-editor__btn {
+  .mar-pad-reset();
+  border: none;
+  background-color: transparent;
+
+  svg {
+    opacity: 0.3;
+  }
+
+  &:hover svg {
+    opacity: 0.5;
+  }
+
+  &--active svg {
+    fill: @pink;
+    opacity: 1;
+  }
+}
+
+.photo-editor__bar-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-editor__bar {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: @dark-blue;
+
+  &--active {
+    display: block;
+  }
+}
+
+.photo-editor__thumb {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  .mar-pad-reset();
+  box-sizing: border-box;
+  height: 14px;
+  width: 14px;
+  background-color: @white;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    background-color: @pink;
+  }
+}
+
+.photo-editor__upl-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-editor__upl-btn {
+  margin-bottom: 12px;
+  color: @pink;
+  border-color: @pink;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: rgba(1, 1, 1, 0.3);
+  }
+}
+
+.photo-editor__cancel-btn {
+  color: @dark-blue;
+  border-color: @dark-blue;
+  opacity: 0.1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba(1, 1, 1, 0.3);
+    background-color: @dark-blue;
+    opacity: 0.3;
+  }
+}

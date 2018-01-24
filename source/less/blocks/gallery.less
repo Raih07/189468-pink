@@ -1,0 +1,31 @@
+.gallery {
+  padding-top: 45px;
+  color: @dark-blue;
+  background-color: @white;
+}
+
+.gallery__description {
+  .mar-pad-reset();
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.gallery__card-main {
+  margin-bottom: 20px;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,98 @@
+.photo-card {
+  .mar-pad-reset();
+
+  &--submain {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+  }
+}
+
+.photo-card__picture {
+  display: block;
+
+  &--main {
+    position: relative;
+    //ширину задать большую
+  }
+}
+
+.photo-card__img {
+  display: block;
+
+/*
+  &--main {
+    display: block;
+  }*/
+}
+
+.photo-card__flag-photo-day {
+  position: absolute;
+  top: 0;
+  padding: 6px 20px;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @pink;
+}
+
+.photo-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  background-color: @gray-white;
+}
+
+.photo-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.photo-card__author {
+  margin-right: 3px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @dark-blue;
+}
+
+.photo-card__time {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300px;
+  text-transform: uppercase;
+  color: @dark-blue;
+}
+
+.photo-card__text {
+  .mar-pad-reset();
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  color: @dark-blue;
+}
+
+.photo-card__like {
+  display: flex;
+  align-items: center;
+}
+
+.photo-card__like-btn {
+  .mar-pad-reset();
+  margin-right: 19px;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    fill: @pink;
+  }
+}
+
+.photo-card__count-item {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @pink;
+}
