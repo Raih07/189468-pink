@@ -6,6 +6,7 @@
 
 .questionnaire__description {
   .mar-pad-reset();
+  .container();
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -14,11 +15,14 @@
 .questionnaire__form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //align-items: center;
 }
 
 .questionnaire__col {
   .mar-pad-reset();
+  .container();
+  padding-top: 35px;
+  padding-bottom: 35px;
   border: none;
 
   &--white {
@@ -32,7 +36,8 @@
 
 .questionnaire__item-tittle {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 30px;
+  text-align: center;
   color: @pink;
 }
 
@@ -141,6 +146,7 @@
   color: @dark-blue;
   font-size: 14px;
   line-height: 30px;
+  text-align: center;
   text-transform: uppercase;
 }
 

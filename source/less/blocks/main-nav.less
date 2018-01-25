@@ -8,9 +8,15 @@
   flex-direction: column;
 }
 
+.main-nav__item {
+  text-align: center;
+}
+
 .main-nav__link {
   display: block;
+  padding: 16px 20px;
   font-size: 18px;
+  font-weight: 700;
   line-height: 32px;
   color: @white;
   text-decoration: none;
@@ -24,4 +30,13 @@
     //color: rgba(@white, 0.3);
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  .mar-pad-reset();
+  border: none;
+  background-color: transparent;
 }

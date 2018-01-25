@@ -18,14 +18,17 @@
 .gallery__list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  .container();
+  //align-items: center;
 }
 
 .gallery__item {
   margin-bottom: 20px;
+  margin-right: 20px;
 
   &:last-child {
-    margin-bottom: 0;
+    //margin-bottom: 0;
+    margin-right: 0;
   }
 }

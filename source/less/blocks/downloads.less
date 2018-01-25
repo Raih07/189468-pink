@@ -1,9 +1,11 @@
 .downloads {
+  .container();
   text-align: center;
 
 }
 
 .downloads__btn {
+  margin-bottom: 32px;
   border-color: @white;
 
   &:hover,
@@ -17,10 +19,16 @@
   }
 }
 
+.downloads__app-list {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .downloads__app-link {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 47px;
+  height: 56px;
   background-repeat: no-repeat;
   background-position: center;
 

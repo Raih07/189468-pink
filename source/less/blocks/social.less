@@ -7,7 +7,7 @@
 .social__btn {
   position: relative;
   display: inline-block;
-  //margin: 0 3px;
+  margin-right: 12px;
   width: 51px;
   height: 51px;
   vertical-align: middle;
@@ -15,6 +15,10 @@
   border-radius: 50%;
   background-color: @white;
   transition: all 0.2s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover:not(:active) {
     border: 3px solid rgb(40, 54, 69);

@@ -1,5 +1,8 @@
 .photo-card {
   .mar-pad-reset();
+  &--main {
+    width: 320px;
+  }
 
   &--submain {
     display: flex;
@@ -40,6 +43,7 @@
 .photo-card__body {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding: 20px 18px;
   background-color: @gray-white;
 }
@@ -77,6 +81,7 @@
 .photo-card__like {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .photo-card__like-btn {
