@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__btn {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  width: 51px;
+  height: 51px;
+  vertical-align: middle;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+  background-color: @white;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover:not(:active) {
+    border: 3px solid rgb(40, 54, 69);
+  }
+}
+
+.social__btn:focus {
+	outline: none;
+	border: 3px solid rgb(40, 54, 69);
+}
+
+.social__btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: @pink;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.social__btn:active svg {
+  opacity: 0.3;
+}
