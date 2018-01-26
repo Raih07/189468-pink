@@ -1,11 +1,14 @@
 .main-nav {
-
+  &--open .main-nav__list {
+    display: block;
+  }
 }
 
 .main-nav__list {
   .list-reset();
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .main-nav__item {
@@ -20,6 +23,7 @@
   line-height: 32px;
   color: @white;
   text-decoration: none;
+  background-color: @dark-blue;
 
   &:hover,
   &:focus {
@@ -39,4 +43,16 @@
   .mar-pad-reset();
   border: none;
   background-color: transparent;
+
+  &:hover svg {
+    fill: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--close {
+    display: none;
+  }
 }
