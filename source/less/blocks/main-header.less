@@ -5,8 +5,27 @@
   color: @white;
   background-color: rgba(0, 0, 0, 0.3);
 
+  @media (min-width: @width-tablets) {
+    min-height: 110px;
+    margin-bottom: -110px;
+  }
+
   &--open {
     background-color: @dark-blue;
+
+  }
+}
+
+.main-header__wrapper {
+  position: relative;
+  .set-container();
+  .container();
+
+  @media (min-width: @width-desktop) {
+    .set-container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -14,7 +33,7 @@
   display: inline-block;
   width: 75px;
   height: 22px;
-  margin: 22px 20px;
+  margin: 22px 0;
 
   &:hover .main-header__logo-img {
     fill: @pink;
@@ -22,5 +41,9 @@
 
   &:active .main-header__logo-img {
     opacity: 0.3;
+  }
+
+  @media (min-width: @width-tablets) {
+    margin-top: 40px;
   }
 }
