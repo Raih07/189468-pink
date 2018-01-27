@@ -47,77 +47,88 @@
 
     <main class="page-main main-header--mob">
       <header class="main-section">
-        <div class="main-section__inner main-section__inner--concurs">
+        <div class="main-section__inner main-section__inner--submain">
           <h1 class="main-section__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </header>
 
       <section class="questionnaire">
         <h2 class="visually-hidden">Анкета участника конкурса</h2>
-        <p class="questionnaire__description">
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-        </p>
+        <div class="questionnaire__description">
+          <p class="questionnaire__description-main">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="questionnaire__description-note">Пожалуйста, заполните форму ниже:</p>
+        </div>
 
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="questionnaire__col questionnaire__col--name questionnaire__col--white">
-            <div class="questionnaire__group">
-              <label class="questionnaire__text-label" for="surname">Фамилия:</label>
+          <fieldset class="questionnaire__col questionnaire__col--name">
+            <div class="questionnaire__group questionnaire__group--name">
+              <label class="questionnaire__text-label questionnaire__text-label--name" for="surname">Фамилия:</label>
               <input class="questionnaire__field" type="text" id="surname" placeholder="Укажите фамилию *">
             </div>
-            <div class="questionnaire__group">
-              <label class="questionnaire__text-label" for="name">Имя:</label>
+            <div class="questionnaire__group questionnaire__group--name">
+              <label class="questionnaire__text-label questionnaire__text-label--name" for="name">Имя:</label>
               <input class="questionnaire__field" type="text" id="name" placeholder="Введите ваше имя *">
             </div>
-            <div class="questionnaire__group">
-              <label class="questionnaire__text-label" for="patronymic">Отчество:</label>
+            <div class="questionnaire__group questionnaire__group--name">
+              <label class="questionnaire__text-label questionnaire__text-label--name" for="patronymic">Отчество:</label>
               <input class="questionnaire__field" type="text" id="patronymic" placeholder="Ну и отчество тоже *">
             </div>
           </fieldset>
 
-          <fieldset class="questionnaire__col questionnaire__col--achiev questionnaire__col--gray">
+          <fieldset class="questionnaire__col questionnaire__col--achiev">
             <legend class="questionnaire__item-tittle">
               Ваши безбашенные достижения в путешествии
             </legend>
             <ul class="questionnaire__list">
-              <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-shark" name="shark" type="checkbox" checked>
-                <label class="questionnaire__label" for="check-shark">Сделал селфи с акулой</label>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-shark" name="shark" type="checkbox" checked>
+                  <label class="questionnaire__label" for="check-shark">Сделал селфи с акулой</label>
+                </li>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-beach" name="beach" type="checkbox" checked>
+                  <label class="questionnaire__label" for="check-beach">Обгорел на пляже</label>
+                </li>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-chucknorris" name="chucknorris" type="checkbox">
+                  <label class="questionnaire__label" for="check-chucknorris">Видел Чака Норриса</label>
+                </li>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-souvenirs" name="souvenirs" type="checkbox">
+                  <label class="questionnaire__label" for="check-souvenirs">Накупил сувениров</label>
               </li>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-tower" name="tower" type="checkbox" checked>
+                  <label class="questionnaire__label" for="check-tower">Удержал башню</label>
+                </li>
+                <li class="questionnaire__option">
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-destrhotel" name="destrhotel" type="checkbox">
+                  <label class="questionnaire__label" for="check-destrhotel">Разгромил отель</label>
+                </li>
+
               <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-beach" name="beach" type="checkbox" checked>
-                <label class="questionnaire__label" for="check-beach">Обгорел на пляже</label>
-              </li>
-              <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-chucknorris" name="chucknorris" type="checkbox">
-                <label class="questionnaire__label" for="check-chucknorris">Видел Чака Норриса</label>
-              </li>
-              <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-souvenirs" name="souvenirs" type="checkbox">
-                <label class="questionnaire__label" for="check-souvenirs">Накупил сувениров</label>
-              </li>
-              <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-tower" name="tower" type="checkbox" checked>
-                <label class="questionnaire__label" for="check-tower">Удержал башню</label>
-              </li>
-              <li class="questionnaire__option">
-                <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-destrhotel" name="destrhotel" type="checkbox">
-                <label class="questionnaire__label" for="check-destrhotel">Разгромил отель</label>
-              </li>
+                  <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-destrhotel" name="destrhotel" type="checkbox">
+                  <label class="questionnaire__label" for="check-destrhotel">Разгромил отель</label>
+                </li>
+
+
             </ul>
           </fieldset>
 
-          <fieldset class="questionnaire__col questionnaire__col--contacts questionnaire__col--white">
-            <div class="questionnaire__group">
-              <label class="questionnaire__text-label" for="tel">Номер телефона</label>
+          <fieldset class="questionnaire__col questionnaire__col--contacts">
+            <legend class="questionnaire__item-tittle">
+              Контактная информация
+            </legend>
+            <div class="questionnaire__group questionnaire__group--contact">
+              <label class="questionnaire__text-label questionnaire__text-label--contact" for="tel">Номер телефона</label>
               <input class="questionnaire__field" type="tel" id="tel" placeholder="Номер, пожалуйста">
             </div>
-            <div class="questionnaire__group">
-              <label class="questionnaire__text-label" for="mail">Aдрес почты</label>
+            <div class="questionnaire__group questionnaire__group--contact">
+              <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">Aдрес почты</label>
               <input class="questionnaire__field" type="email" id="mail" placeholder="Введите почту *">
             </div>
           </fieldset>
 
-          <fieldset class="questionnaire__col questionnaire__col--apps questionnaire__col--gray">
+          <fieldset class="questionnaire__col questionnaire__col--apps">
             <legend class="questionnaire__item-tittle">
               С каким приложением путешествовали?
             </legend>
@@ -137,18 +148,20 @@
             </ul>
           </fieldset>
 
-          <fieldset class="questionnaire__col questionnaire__col--feeling questionnaire__col--white">
+          <fieldset class="questionnaire__col questionnaire__col--feeling">
             <legend class="questionnaire__item-tittle">
               Опишите свои эмоции
             </legend>
             <div class="questionnaire__group">
-              <textarea class="questionnaire__area" name="emotions" id="emotions-message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea class="questionnaire__area" name="emotions" id="emotions-message" placeholder="Можно прям в красках, не стеснясь в выражениях"></textarea>
             </div>
           </fieldset>
-          <button class="questionnaire__btn btn btn--square" type="submit">Отправить форму</button>
-          <p class="questionnaire__legend">
-            <sup class="questionnaire__star-symbol">*</sup> — обязательные поля
-          </p>
+          <div class="questionnaire__bottom">
+            <button class="questionnaire__btn btn btn--square" type="submit">Отправить форму</button>
+            <p class="questionnaire__legend">
+              <sup class="questionnaire__star-symbol">*</sup> — обязательные поля
+            </p>
+          </div>
         </form>
       </section>
     </main>

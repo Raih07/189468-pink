@@ -1,48 +1,159 @@
 .questionnaire {
+  .container();
+  .set-container();
   padding-top: 45px;
   color: @dark-blue;
   background-color: @white;
+
+  @media (min-width: @width-tablets) {
+    padding-top: 90px;
+  }
 }
 
 .questionnaire__description {
   .mar-pad-reset();
-  .container();
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @width-tablets) {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+}
+
+.questionnaire__description-main,
+.questionnaire__description-note {
+  .mar-pad-reset();
+}
+
+.questionnaire__description-note {
+  display: none;
+
+  @media (min-width: @width-tablets) {
+    display: block;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: inline-block;
+  }
 }
 
 .questionnaire__form {
   display: flex;
   flex-direction: column;
   //align-items: center;
+
+  @media (min-width: @width-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .questionnaire__col {
+  box-sizing: border-box;
   .mar-pad-reset();
-  .container();
+  //.container();
   padding-top: 35px;
   padding-bottom: 35px;
   border: none;
 
-  &--white {
+  &--name {
     background-color: @white;
+    @media (min-width: @width-tablets) {
+      order: 0;
+    }
+
+    @media (min-width: @width-desktop) {
+      width: 435px;
+    }
   }
 
-  &--gray {
+  &--achiev {
     background-color: @gray-white;
+    @media (min-width: @width-tablets) {
+      padding-left: 58px;
+      padding-right: 58px;
+      border: 2px solid @dark-gray;
+      background-color: @white;
+      order: 3;
+    }
+
+    @media (min-width: @width-desktop) {
+      width: 100%;
+    }
+  }
+
+  &--contacts {
+    background-color: @white;
+    @media (min-width: @width-tablets) {
+      padding-left: 58px;
+      padding-right: 58px;
+      border: 2px solid @dark-gray;
+      order: 2;
+    }
+
+    @media (min-width: @width-desktop) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &--apps {
+    background-color: @gray-white;
+    @media (min-width: @width-tablets) {
+      padding-left: 58px;
+      padding-right: 58px;
+      border: 2px solid @dark-gray;
+      background-color: @white;
+      order: 1;
+    }
+  }
+
+  &--feeling {
+    background-color: @white;
+    @media (min-width: @width-tablets) {
+      padding-left: 58px;
+      padding-right: 58px;
+      border: 2px solid @dark-gray;
+      order: 4;
+    }
+
+    @media (min-width: @width-desktop) {
+      width: 100%;
+    }
   }
 }
 
 .questionnaire__item-tittle {
   font-size: 14px;
-  line-height: 30px;
+  line-height: 18px;
+  text-transform: uppercase;
   text-align: center;
   color: @pink;
 }
 
 .questionnaire__group {
   margin-bottom: 20px;
+
+  &--name {
+    @media (min-width: @width-tablets) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--contact {
+    @media (min-width: @width-tablets) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: @width-desktop) {
+      width: 375px;
+    }
+  }
 }
 
 .questionnaire__text-label {
@@ -52,6 +163,19 @@
   line-height: 30px;
   color: @pink;
   text-transform: uppercase;
+
+  &--name {
+    @media (min-width: @width-tablets) {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &--contact {
+    @media (min-width: @width-tablets) {
+      margin-top: 10px;
+    }
+  }
 }
 
 .questionnaire__field,
@@ -84,6 +208,20 @@
 
 .questionnaire__list {
   .list-reset();
+
+  @media (min-width: @width-desktop) {
+    //display: flex;
+   // justify-content: space-between;
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .questionnaire__col--achiev .questionnaire__option {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .questionnaire__option {
@@ -125,6 +263,16 @@
   border-color: @pink;
 }
 
+.questionnaire__bottom {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @width-tablets) {
+    flex-direction: row;
+    justify-content: space-between;
+    order: 5;
+  }
+}
+
 .questionnaire__btn {
   background-color: @green;
 
@@ -139,6 +287,10 @@
 
   &:disabled {
     background-color: @dark-gray;
+  }
+
+  @media (min-width: @width-tablets) {
+    width: 300px;
   }
 }
 
