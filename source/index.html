@@ -44,7 +44,7 @@
             <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
             <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
             <li class="main-nav__item"><a href="form.html" class="main-nav__link">Конкурс</a></li>
-            <li class="main-nav__item"><a href="" class="main-nav__link">Html Academy</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
@@ -115,16 +115,21 @@
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <cite class="reviews__author-name">Николай Петров</cite><!--или h3-->
+              <p class="reviews__author-work">25 лет, водитель трамвая</p>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite><!--или h3-->
+              <cite class="reviews__author-name">Дмитрий Козлов</cite><!--или h3-->
+              <p class="reviews__author-work">20 лет, учитель</p>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite><!--или h3-->
+              <cite class="reviews__author-name">Анатолий Серов</cite><!--или h3-->
+              <p class="reviews__author-work">15 лет, студент</p>
               <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
+            <button class="reviews__btn reviews__btn--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__btn reviews__btn--next" type="button" aria-label="Следующий отзыв"></button>
           </div>
           <div class="reviews__toggles slider__toggles">
             <button class="slider__btn slider__btn--active" type="button" aria-label="Первый отзыв"></button>
@@ -139,29 +144,31 @@
           <h2 class="visually-hidden">Цены на приложение</h2>
           <table class="price__list">
             <tr class="price__row">
-              <th class="price__header-item">
+              <th class="price__tariff price__tariff--none"></th>
+              <th class="price__tariff">
+                <div class="price__name">База</div>
+                <div class="price__cost">1,99 usd</div>
+              </th>
+              <th class="price__tariff">
                 <div class="price__name">Стандарт</div>
                 <div class="price__cost">3,99 usd</div>
                 <span class="price__flag">Хит</span>
               </th>
-              <th class="price__header-item">
-                <div class="price__name">Стандарт</div>
-                <div class="price__cost">3,99 usd</div>
-                <span class="price__flag">Хит</span>
-              </th>
-              <th class="price__header-item">
-                <div class="price__name">Стандарт</div>
-                <div class="price__cost">3,99 usd</div>
-                <span class="price__flag">Хит</span>
+              <th class="price__tariff">
+                <div class="price__name">Анлим</div>
+                <div class="price__cost">9,99 usd</div>
               </th>
             </tr>
             <tr class="price__row">
+              <td class="price__item price__item--filter-name">
+                <div class="price__item-name">Розовый фильтр</div>
+              </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Розовый фильтр</div>
                 <div class="price__avaible price__avaible--yes"></div>
               </td>
               <td class="price__item">
-                <div class="price__item-name">Розовый фильтр</div>
+                <div class="price__item-name--cell">Розовый фильтр</div>
                 <div class="price__avaible price__avaible--yes">
                   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
   <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
@@ -169,17 +176,20 @@
                 </div>
               </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Розовый фильтр</div>
                 <div class="price__avaible price__avaible--yes"></div>
               </td>
             </tr>
             <tr class="price__row">
+              <td class="price__item price__item--filter-name">
+                <div class="price__item-name">Смайлики</div>
+              </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Смайлики</div>
                 <div class="price__avaible price__avaible--no"></div>
               </td>
               <td class="price__item">
-                <div class="price__item-name">Смайлики</div>
+                <div class="price__item-name--cell">Смайлики</div>
                 <div class="price__avaible price__avaible--yes">
                   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
   <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
@@ -187,21 +197,24 @@
                 </div>
               </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Смайлики</div>
                 <div class="price__avaible price__avaible--yes">
 
                 </div>
               </td>
             </tr>
             <tr class="price__row">
+              <td class="price__item price__item--filter-name">
+                <div class="price__item-name">Комментарии</div>
+              </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Комментарии</div>
                 <div class="price__avaible price__avaible--no">
 
                 </div>
               </td>
               <td class="price__item">
-                <div class="price__item-name">Комментарии</div>
+                <div class="price__item-name--cell">Комментарии</div>
                 <div class="price__avaible price__avaible--no">
                   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
   <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
@@ -209,7 +222,7 @@
                 </div>
               </td>
               <td class="price__item">
-                <div class="price__item-name"></div>
+                <div class="price__item-name--cell">Комментарии</div>
                 <div class="price__avaible price__avaible--yes"></div>
               </td>
             </tr>
@@ -230,16 +243,16 @@
         </header>
 
         <div class="contacts__list">
-          <div class="contacts__item">
-            <p class="contacts__tittle"><b>Звоните:</b></p>
+          <div class="contacts__item contacts__item--tel">
+            <p class="contacts__item-tittle"><b>Звоните:</b></p>
             <a class="contacts__text" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </div>
-          <div class="contacts__item">
-            <p class="contacts__tittle"><b>Пишите:</b></p>
+          <div class="contacts__item contacts__item--mail">
+            <p class="contacts__item-tittle"><b>Пишите:</b></p>
             <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
-          <div class="contacts__item">
-            <p class="contacts__tittle"><b>Приезжайте в гости:</b></p>
+          <div class="contacts__item contacts__item--adress">
+            <p class="contacts__item-tittle"><b>Приезжайте в гости:</b></p>
             <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div>
@@ -251,7 +264,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--main-page">
       <div class="main-footer__logo">
         <svg class="main-footer__logo-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
   <g>

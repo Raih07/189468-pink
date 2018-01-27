@@ -1,8 +1,16 @@
 .map {
   position: relative;
-  min-height: 267px;
+  min-height: 200px;
   background-color: #e7e4dc;
   background: url("../../img/bg-map-mobile@1x.png") no-repeat bottom;
+
+  @media (min-width: @width-tablets) {
+    min-height: 375px;
+  }
+
+  @media (min-width: @width-desktop) {
+    min-height: 502px;
+  }
 
   &::before {
     content: "";
