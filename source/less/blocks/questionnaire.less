@@ -11,14 +11,17 @@
 }
 
 .questionnaire__description {
-  .mar-pad-reset();
   font-size: 14px;
   line-height: 30px;
   text-align: center;
 
   @media (min-width: @width-tablets) {
     font-size: 18px;
-    padding: 0 20px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 68px;
   }
 }
 
@@ -33,11 +36,15 @@
   @media (min-width: @width-tablets) {
     display: block;
   }
+}
 
-  @media (min-width: @width-desktop) {
-    display: inline-block;
+@media (min-width: @width-desktop) {
+  .questionnaire__description-main,
+  .questionnaire__description-note {
+    display: inline;
   }
 }
+
 
 .questionnaire__form {
   display: flex;

@@ -2,13 +2,23 @@
   .mar-pad-reset();
   &--main {
     width: 320px;
+    width: 100%;
   }
 
   &--submain {
     display: flex;
     flex-direction: column;
     width: 280px;
+
+    @media (min-width: @width-tablets) {
+      width: 300px;
+    }
   }
+}
+
+.photo-card__main-photo-wrapper {
+  .container();
+  .set-container();
 }
 
 .photo-card__picture {
@@ -16,25 +26,24 @@
 
   &--main {
     position: relative;
-    //ширину задать большую
   }
 }
 
 .photo-card__img {
   display: block;
 
-/*
-  &--main {
-    display: block;
-  }*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .photo-card__flag-photo-day {
   position: absolute;
   top: 0;
+  left: 50%;
   padding: 6px 20px;
   font-size: 12px;
   line-height: 24px;
+  font-weight: 700;
   text-transform: uppercase;
   color: @white;
   background-color: @pink;
@@ -46,12 +55,30 @@
   flex-grow: 1;
   padding: 20px 18px;
   background-color: @gray-white;
+
+  @media (min-width: @width-tablets) {
+    padding: 25px;
+  }
+
+  &--main {
+    @media (min-width: @width-tablets) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .photo-card__header {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+
+  &--main {
+    @media (min-width: @width-tablets) {
+      order: -2;
+      flex-grow: 1;
+    }
+  }
 }
 
 .photo-card__author {
@@ -65,7 +92,7 @@
 .photo-card__time {
   font-size: 12px;
   line-height: 12px;
-  font-weight: 300px;
+  font-weight: 300;
   text-transform: uppercase;
   color: @dark-blue;
 }
@@ -82,6 +109,16 @@
   display: flex;
   align-items: center;
   margin-top: auto;
+
+  @media (min-width: @width-tablets) {
+    margin-right: 0;
+  }
+
+  &--main {
+    @media (min-width: @width-tablets) {
+      order: -1;
+    }
+  }
 }
 
 .photo-card__like-btn {
@@ -89,6 +126,10 @@
   margin-right: 19px;
   border: none;
   background-color: transparent;
+
+  @media (min-width: @width-tablets) {
+    margin-right: 0;
+  }
 
   svg {
     fill: @pink;
@@ -100,4 +141,13 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @pink;
+
+  @media (min-width: @width-tablets) {
+    order: -1;
+    margin-right: auto;
+
+    &--main {
+      margin-right: 5px;
+    }
+  }
 }

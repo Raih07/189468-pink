@@ -1,9 +1,15 @@
 .photo-editor {
   background-color: @gray-white;
   padding-top: 20px;
+
+  @media (min-width: @width-desktop) {
+    background-color: @white;
+  }
 }
 
 .photo-editor__form {
+  .container();
+  .set-container();
   display: flex;
   flex-direction: column;
 }
