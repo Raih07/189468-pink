@@ -1,6 +1,6 @@
 .photo-editor {
+  .set-container();
   background-color: @gray-white;
-  padding-top: 20px;
 
   @media (min-width: @width-desktop) {
     background-color: @white;
@@ -8,18 +8,65 @@
 }
 
 .photo-editor__form {
-  .container();
-  .set-container();
+
+  padding-top: 20px;
+  padding-bottom: 41px;
+
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @width-tablets) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-bottom: 57px;
+    padding-left: 80px;
+    padding-right: 60px;
+    background-color: @gray-white;
+  }
 }
 
 .photo-editor__picture {
   margin-bottom: 42px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  .container();
+
+  @media (min-width: @width-tablets) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.photo-editor__body {
+  @media (min-width: @width-tablets) {
+    display: flex;
+    flex-direction: column;
+    //только в планшете, для задания grow 1 уравновесииь с картинкой и прижатия кнопок отправки к низу маргином сверху
+    width: 275px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 410px;
+  }
+}
+
+.photo-editor__controls-list {
+
+
+
+}
+
+.photo-editor__control {
+  display: inline-block;
+  @media (min-width: @width-tablets) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .photo-editor__controls {
@@ -67,8 +114,15 @@
   height: 2px;
   background-color: @dark-blue;
 
-  &--active {
+  &--crop {
     display: block;
+  }
+
+  @media (min-width: @width-tablets) {
+    &--saturate,
+    &--bright {
+      display: block;
+    }
   }
 }
 
@@ -97,8 +151,19 @@
   flex-direction: column;
   .container();
   padding-top: 38px;
-  padding-bottom: 41px;
-  border-top: 1px solid rgba(40, 54, 69, 0.1);
+  //padding-bottom: 41px;
+  //border-top: 1px solid rgba(40, 54, 69, 0.1);
+
+  @media (min-width: @width-tablets) {
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 13px;
+  }
+  @media (min-width: @width-desktop) {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .photo-editor__upl-btn {
@@ -114,6 +179,15 @@
 
   &:active {
     color: rgba(1, 1, 1, 0.3);
+  }
+
+  @media (min-width: @width-tablets) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 0;
+    width: 183px;
   }
 }
 
@@ -131,5 +205,8 @@
     color: rgba(1, 1, 1, 0.3);
     background-color: @dark-blue;
     opacity: 0.3;
+  }
+  @media (min-width: @width-desktop) {
+    width: 183px;
   }
 }
