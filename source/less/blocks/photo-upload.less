@@ -1,12 +1,28 @@
 .photo-upload {
-  padding-top: 45px;
   color: @dark-blue;
   background-color: @white;
 }
 
 .photo-upload__description {
-  .mar-pad-reset();
+  box-sizing: border-box;
+  .container();
+  .set-container();
+  padding-top: 45px;
+  padding-bottom: 50px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @width-tablets) {
+    font-size: 18px;
+    padding: 90px 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 90px 150px;
+  }
+}
+
+.photo-upload__description-text {
+  .mar-pad-reset();
 }

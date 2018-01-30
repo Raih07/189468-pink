@@ -1,12 +1,39 @@
 .main-header {
   width: 100%;
   color: @white;
-  background-color: @black;
+  min-height: 66px;
 
-  &--mob {
-    position: relative;
+  &--open {
+    background-color: @dark-blue;
+    //background-color: red;
+  }
+
+  &--close {
+    margin-bottom: -66px;
+    margin-bottom: -70px;
 
     background-color: rgba(0, 0, 0, 0.3);
+   //background-color: red;
+  }
+
+  @media (min-width: @width-tablets) {
+    &--close {
+    min-height: 110px;
+    margin-bottom: -110px;
+    }
+  }
+}
+
+.main-header__wrapper {
+  //position: relative;
+  //.set-container();//наверно можно удалить
+  //.container();
+
+  @media (min-width: @width-desktop) {
+    .set-container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -14,13 +41,27 @@
   display: inline-block;
   width: 75px;
   height: 22px;
-  margin: 22px 20px;
+  margin: 22px 0;
+  margin-bottom: 26px;
+  margin-left: 20px;
+  fill: @white;
 
   &:hover .main-header__logo-img {
     fill: @pink;
   }
 
   &:active .main-header__logo-img {
-    opacity: 0.3;
+    fill: rgba(210, 40, 86, 0.3);
+  }
+
+  @media (min-width: @width-tablets) {
+    margin-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 0;
+    margin-top: 45px;
+    margin-bottom: 22px;
   }
 }

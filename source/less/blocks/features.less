@@ -5,12 +5,32 @@
 
 .features__tittle {
   .container();
+  padding-top: 40px;
+  padding-bottom: 30px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
   text-align: center;
   color: @dark-blue;
   background-color: @white;
+
+  @media (min-width: @width-tablets) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.features__wrapper {
+  .set-container();
 }
 
 .features__tittle-main,
@@ -18,9 +38,26 @@
   .mar-pad-reset();
 }
 
+.features__tittle-note {
+  margin-top: 30px;
+
+  @media (min-width: @width-tablets) {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @width-desktop) {
+    max-width: 500px;
+  }
+}
+
+.features__wrapper {
+  .container();
+  .set-container();
+}
+
 .features__list {
   .list-reset();
-  .container();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,12 +69,77 @@
     background-image: url("../../img/iphone-screen-mobile@1x.png");
     background-position: center top;
     background-repeat: no-repeat;
+
+    @media (min-width: @width-tablets) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @width-tablets) {
+    padding-left: 50%;
+    background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @width-desktop) {
+    flex-direction: row;
+    align-items: stretch;
+    padding-left: 0;
+    background-image: none;
   }
 }
 
 .features__item {
   text-align: center;
   margin-bottom: 30px;
+
+  @media (min-width: @width-tablets) {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    width: 300px;
+    padding: 357px 30px 67px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 301px;
+      //background-color: aqua;
+    }
+
+    &--mood {
+      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    &--world {
+      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    &--friends {
+      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+  }
 }
 
 .features__name {
@@ -53,4 +155,84 @@
   font-size: @font-size;
   line-height: @line-height;
   color: @dark-blue;
+}
+
+.features__period {
+  @media (min-width: @width-mobile) {
+    display: none;
+  }
+
+  @media (min-width: @width-tablets) {
+    display: block;
+    background-color: @white;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @gray-white;
+  }
+}
+
+.features__period-wrapper {
+  .set-container();
+  display: flex;
+  justify-content: flex-end;
+
+  @media (min-width: @width-tablets) {
+    //padding-left: 330px;
+  }
+
+  @media (min-width: @width-desktop) {
+    //padding-left: 380px;
+  }
+}
+
+.features__period-container {
+  @media (min-width: @width-tablets) {
+    width: 310px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 570px;
+  }
+}
+
+.features__period-tittle {
+  @media (min-width: @width-tablets) {
+    .mar-pad-reset();
+    margin-bottom: 10px;
+    max-width: 170px;
+    font-size: 30px;
+    line-height: 36px;
+    color: @black;
+  }
+
+  @media (min-width: @width-desktop) {
+    max-width: 420px;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__period-text {
+  @media (min-width: @width-tablets) {
+    .mar-pad-reset();
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: @dark-blue;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 25px;
+  }
+}
+
+.features__period-link {
+  font-size: 14px;
+  line-height: 24px;
+  color: @pink;
+
+  &:hover {
+    color: @dark-blue;
+    opacity: 0.5;
+  }
 }
