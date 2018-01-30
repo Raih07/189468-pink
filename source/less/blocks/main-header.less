@@ -1,25 +1,32 @@
 .main-header {
-  position: relative;
-  margin-bottom: -66px;
   width: 100%;
   color: @white;
-  background-color: rgba(0, 0, 0, 0.3);
-
-  @media (min-width: @width-tablets) {
-    min-height: 110px;
-    margin-bottom: -110px;
-  }
+  min-height: 69px;
 
   &--open {
     background-color: @dark-blue;
+    background-color: red;
+  }
 
+  &--close {
+    position: relative;
+    margin-bottom: -69px;
+    background-color: rgba(0, 0, 0, 0.3);
+   background-color: red;
+  }
+
+  @media (min-width: @width-tablets) {
+    &--close {
+    min-height: 110px;
+    margin-bottom: -110px;
+    }
   }
 }
 
 .main-header__wrapper {
-  position: relative;
-  .set-container();
-  .container();
+  //position: relative;
+  //.set-container();//наверно можно удалить
+  //.container();
 
   @media (min-width: @width-desktop) {
     .set-container();
@@ -34,16 +41,23 @@
   width: 75px;
   height: 22px;
   margin: 22px 0;
+  margin-left: 20px;
+  fill: @white;
 
   &:hover .main-header__logo-img {
     fill: @pink;
   }
 
   &:active .main-header__logo-img {
-    opacity: 0.3;
+    fill: rgba(210, 40, 86, 0.3);
   }
 
   @media (min-width: @width-tablets) {
     margin-top: 40px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 0;
+    margin-top: 45px;
   }
 }

@@ -1,5 +1,6 @@
 .main-nav {
   @media (min-width: @width-desktop) {
+    margin-top: 18px;
     max-width: 750px;
   }
 
@@ -10,16 +11,22 @@
 
 .main-nav__list {
   .list-reset();
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
   display: none;
 
+  @media (min-width: @width-tablets) {
+    margin-top: 26px;
+  }
+
   @media (min-width: @width-desktop) {
+    margin-top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    //justify-content: flex-end;
     flex-wrap: wrap;
-    width: 630px;
+    //width: 620px;
   }
 }
 
@@ -29,30 +36,40 @@
   @media (min-width: @width-desktop) {
     margin-right: 80px;
 
+    background-color: yellow;
+
     &:last-child {
       margin-right: 0;
     }
   }
-
 }
 
 .main-nav__link {
   display: block;
-  padding: 16px 20px;
+  padding: 15px 20px;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   color: @white;
   text-decoration: none;
+  text-transform: uppercase;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
   background-color: @dark-blue;
 
   @media (min-width: @width-desktop) {
     padding: 0;
     font-weight: 400;
+    text-transform: none;
+    border: none;
     background-color: transparent;
+
+    background-color: aqua;
   }
 
-  &:hover,
+  &[href]:hover {
+    color: @pink;
+  }
   &:focus {
     color: @pink;
   }
@@ -90,8 +107,26 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  &--close {
+.main-nav--opened .main-nav__icon--open {
+  display: block;
+}
+
+.main-nav--close {
+  .main-nav__icon--open {
+    display: block;
+  }
+  .main-nav__icon--close {
     display: none;
+  }
+}
+
+.main-nav--open {
+  .main-nav__icon--open {
+    display: none;
+  }
+  .main-nav__icon--close {
+    display: block;
   }
 }
