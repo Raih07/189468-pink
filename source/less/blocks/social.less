@@ -7,6 +7,7 @@
 .social__btn {
   position: relative;
   display: inline-block;
+  box-sizing: border-box;
   margin-right: 12px;
   width: 51px;
   height: 51px;
@@ -30,12 +31,18 @@
 	border: 3px solid rgb(40, 54, 69);
 }
 
-.social__btn svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  fill: @pink;
-  transform: translateX(-50%) translateY(-50%);
+.social__btn {
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: @pink;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &--youtube svg {
+    transform: translateX(-40%) translateY(-50%);
+  }
 }
 
 .social__btn:active svg {
