@@ -1,0 +1,27 @@
+.slider__toggles {
+  text-align: center;
+  font-size: 0;
+}
+
+.slider__btn {
+  box-sizing: border-box;
+  display: inline-block;
+  .mar-pad-reset();
+  margin-right: 19px;
+  width: 6px;
+  height: 6px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  //background-color: #bec2c7;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    box-shadow: 0 0 0 3px @dark-blue;
+    background-color: transparent;
+    //border-color: @dark-blue;
+  }
+}
