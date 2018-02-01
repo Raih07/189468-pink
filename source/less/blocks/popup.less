@@ -19,7 +19,8 @@
 
   @media (min-width: @width-tablets) {
     width: 460px;
-    border-radius:5px;
+    border-radius: 5px;
+    overflow: hidden;
   }
 
   &--success {
@@ -30,19 +31,29 @@
 }
 
 .popup__body {
-  padding: 40px 20px 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  &--error {
-    padding-bottom: 0;
-  }
-
-  @media (min-width: @width-tablets) {
-    padding: 35px 80px 30px;
-  }
+  background-color: cadetblue;//удалить
 
   &--success {
+    padding-top: 37px;
+    padding-bottom: 32px;
+
     @media (min-width: @width-tablets) {
-      padding: 40px 160px 32px;
+      padding: 35px 76px 34px;
+    }
+    @media (min-width: @width-desktop) {
+      padding: 40px 160px 38px;
+    }
+  }
+
+  &--error {
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    @media (min-width: @width-tablets) {
+      padding: 35px 76px 5px;
     }
   }
 }
@@ -56,40 +67,54 @@
   color: @black;
 
   @media (min-width: @width-tablets) {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
     font-size: 30px;
     line-height: 40px;
   }
 }
 
+@media (min-width: @width-tablets) {
+  .popup__body--error .popup__tittle {
+    padding: 0 25px;
+  }
+}
+
 .popup__text {
   .mar-pad-reset();
-  font-size: 18px;
+  font-size: 14px;
   line-height: 24px;
   color: @dark-blue;
+
+  @media (min-width: @width-tablets) {
+    font-size: 18px;
+  }
 }
 
 .popup__bottom {
-  padding: 48px 20px 52px;
   background-color: @gray-white;
+
+  &--success {
+    padding: 48px 20px 52px;
+    background-color: @white;
+    background-color: red;//удалить
+
+    @media (min-width: @width-tablets) {
+      padding: 48px 80px 52px;
+    }
+
+    @media (min-width: @width-desktop) {
+      padding-left: 160px;
+      padding-right: 160px;
+    }
+  }
 
   &--error {
     padding: 38px 20px 50px;
     background-color: @white;
-  }
+    background-color: red;//удалить
 
-  @media (min-width: @width-tablets) {
-    padding: 48px 80px 52px;
-
-    &--error {
-      padding: 30px 80px 52px;
-    }
-  }
-
-  &--success {
-    @media (min-width: @width-desktop) {
-      padding-left: 160px;
-      padding-right: 160px;
+    @media (min-width: @width-tablets) {
+      padding: 33px 80px 51px;
     }
   }
 }
