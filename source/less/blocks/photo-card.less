@@ -47,23 +47,43 @@
   text-transform: uppercase;
   color: @white;
   background-color: @pink;
+
+  @media (min-width: @width-tablets) {
+    left: 75.7%;
+    top: 57px;
+  }
+  @media (min-width: @width-desktop) {
+    left: 77.5%;
+    top: 54px;
+  }
 }
 
 .photo-card__body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 20px 18px;
+  padding: 18px 18px 20px;
   background-color: @gray-white;
 
   @media (min-width: @width-tablets) {
-    padding: 25px;
+    padding-top: 24px;
+    padding-right: 32px;
+    padding-bottom: 21px;
+    padding-left: 28px;
   }
 
   &--main {
     @media (min-width: @width-tablets) {
       flex-direction: row;
       flex-wrap: wrap;
+      padding-top: 24px;
+      padding-right: 29px;
+      padding-bottom: 15px;
+      padding-left: 28px;
+    }
+    @media (min-width: @width-desktop) {
+      padding-right: 31px;
+      padding-bottom: 12px;
     }
   }
 }
@@ -103,16 +123,20 @@
   font-size: 14px;
   line-height: 24px;
   color: @dark-blue;
+
+  @media (min-width: @width-tablets) {
+    margin-bottom: 12px;
+  }
+  @media (min-width: @width-desktop) {
+    margin-bottom: 13px;
+  }
+
 }
 
 .photo-card__like {
   display: flex;
   align-items: center;
   margin-top: auto;
-
-  @media (min-width: @width-tablets) {
-    margin-right: 0;
-  }
 
   &--main {
     @media (min-width: @width-tablets) {
@@ -147,7 +171,12 @@
     margin-right: auto;
 
     &--main {
-      margin-right: 5px;
+      margin-right: 17px;
+    }
+  }
+  @media (min-width: @width-desktop) {
+    &--main {
+      margin-right: 18px;
     }
   }
 }
