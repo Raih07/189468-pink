@@ -73,7 +73,7 @@
   padding: 16px 45px 20px;
   color: @white;
   border-left: 2px solid @dark-gray;
-  border-left: 2px solid @dark-gray;
+  border-right: 2px solid @dark-gray;
   background-color: @dark-blue;
 
   &--hit::before {
@@ -125,12 +125,12 @@
   }
 
   .price__tariff {
-    &:first-of-type {
-      border-left: none;
+    &:nth-child(2) {
+      border-left-color: transparent;
     }
 
     &:last-of-type {
-      border-right: none;
+      border-right-color: @dark-blue;
     }
   }
 }

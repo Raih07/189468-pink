@@ -25,6 +25,12 @@
   &:hover:not(:active) {
     border: 3px solid rgb(40, 54, 69);
   }
+
+  @media (min-width: @width-desktop) {
+    &:first-child {
+      margin-left: 2%;
+    }
+  }
 }
 
 .social__btn:focus {
