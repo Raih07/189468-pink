@@ -271,9 +271,14 @@
 
   &--contact {
     @media (min-width: @width-tablets) {
+      position: relative;
       display: flex;
       flex-direction: column-reverse;
       margin-bottom: 29px;
+
+      .questionnaire__field {
+        padding-right: 70px;
+      }
     }
 
     @media (min-width: @width-desktop) {
@@ -284,6 +289,39 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+}
+
+.questionnaire__group--contact::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 60px;
+  height: 59px;
+  background-color: @dark-gray;
+  border: none;
+}
+
+.questionnaire__group {
+  @media (min-width: @width-tablets) {
+    &--phone {
+      &::after {
+        background-image: url("../../img/phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 19px;
+      }
+    }
+
+    &--mail {
+      &::after {
+        background-image: url("../../img/mail.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 13px;
       }
     }
   }
