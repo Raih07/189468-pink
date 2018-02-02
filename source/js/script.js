@@ -20,8 +20,8 @@ nav_toggle.addEventListener('click', function() {
     main_header.classList.remove('main-header--close');
     main_header.classList.add('main-header--open');
   }
- // main_nav.classList.toggle('main-nav--open');
- // main_header.classList.toggle('main-header--open');
+  //main_nav.classList.toggle('main-nav--open');
+  //main_header.classList.toggle('main-header--open');
 /*
   if (!main_nav.classList.contains('main-nav--open')) {
     nav_toogle_close.style.display = 'block';
