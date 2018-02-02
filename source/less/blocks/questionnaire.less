@@ -295,14 +295,16 @@
 }
 
 .questionnaire__group--contact::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 60px;
-  height: 59px;
-  background-color: @dark-gray;
-  border: none;
+  @media (min-width: @width-tablets) {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 60px;
+    height: 59px;
+    background-color: @dark-gray;
+    border: none;
+  }
 }
 
 .questionnaire__group {
