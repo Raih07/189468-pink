@@ -293,6 +293,7 @@
 
   @media (min-width: @width-tablets) {
     //padding-left: 330px;
+    /*
     &::before {
       content: "24";
       display: block;
@@ -306,17 +307,53 @@
       text-align: center;
       top: 20px;
 
-
       background-color: yellow;
       background-image: url("../../img/icon-editor-diagram-fill.svg"), url("../../img/icon-timer.svg");
       background-repeat: no-repeat;
       background-position: center top 56px, center;
       background-size: 202px 202px, 239px 276px;
-    }
+    }*/
   }
 
   @media (min-width: @width-desktop) {
     //padding-left: 380px;
+  }
+}
+
+.features__timer {
+  position: relative;
+  width: 239px;
+  height: 276px;
+  background-color: yellow;
+  background-image: url("../../img/icon-editor-diagram-fill.svg"), url("../../img/icon-timer.svg");
+  background-repeat: no-repeat;
+  background-position: center top 56px, center;
+  background-size: 202px 202px, 239px 276px;
+
+  &::after {
+    content: "24";
+    position: absolute;
+    top: 77px;
+    left: 50%;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 149.47px;
+    color: @pink;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 299px;
+    height: 345px;
+    background-position: center top 70px, center;
+    background-size: 253px 253px, 299px 345px;
+
+    &::after {
+    top: 97px;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 186.84px;
+    }
   }
 }
 
