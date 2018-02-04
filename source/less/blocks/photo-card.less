@@ -14,9 +14,15 @@
     display: flex;
     flex-direction: column;
     width: 280px;
+    min-height: 301px;
 
     @media (min-width: @width-tablets) {
       width: 300px;
+      min-height: 455px;
+    }
+
+    @media (min-width: @width-desktop) {
+      min-height: 555px;
     }
   }
 }
@@ -40,6 +46,8 @@
 
   margin-left: auto;
   margin-right: auto;
+
+
 }
 
 .photo-card__flag-photo-day {
@@ -78,8 +86,12 @@
   @media (min-width: @width-tablets) {
     padding-top: 24px;
     padding-right: 32px;
-    padding-bottom: 21px;
+    padding-bottom: 23px;
     padding-left: 28px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-bottom: 22px;
   }
 
   &--main {
@@ -93,7 +105,7 @@
     }
     @media (min-width: @width-desktop) {
       padding-right: 31px;
-      padding-bottom: 12px;
+      padding-bottom: 11px;
     }
   }
 }

@@ -123,9 +123,13 @@
   width: 100%;
   background-color: @green;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: @dark-green;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #fff,
+	0 0 6px 6px @dark-green;
   }
 
   &:active {

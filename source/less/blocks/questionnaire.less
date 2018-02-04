@@ -309,21 +309,21 @@
 
 .questionnaire__group {
   @media (min-width: @width-tablets) {
-    &--phone {
+    &--phone-icon {
       &::after {
-        background-image: url("../../img/phone.svg");
+        background-image: url("../../img/icon-phone.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 20px 19px;
+        background-size: 20px 20px;
       }
     }
 
-    &--mail {
+    &--mail-icon {
       &::after {
-        background-image: url("../../img/mail.svg");
+        background-image: url("../../img/icon-mail.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 18px 13px;
+        background-size: 18px 14px;
       }
     }
   }
@@ -383,13 +383,13 @@
 
 .questionnaire__field:hover,
 .questionnaire__area:hover {
-	border-color: @dark-blue;
+  border-color: @dark-blue;
 }
 
 .questionnaire__field:focus,
 .questionnaire__area:focus {
-	outline: none;
-	border-color: @pink;
+  outline: none;
+  border-color: @pink;
 }
 
 .questionnaire__list {
@@ -494,7 +494,7 @@
 .questionnaire-input-checkbox:checked + label:after {
   content: "";
   position: absolute;
- // top: 4px;
+  //top: 4px;
   top: 50%;
   left: -60px;
   width: 22px;
@@ -551,9 +551,13 @@
   margin-bottom: 20px;
   background-color: @green;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: @dark-green;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #fff,
+	0 0 6px 6px @dark-green;
   }
 
   &:active {

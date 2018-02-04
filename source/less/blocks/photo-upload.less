@@ -5,9 +5,9 @@
 
 .photo-upload__description {
   box-sizing: border-box;
-  .container();
+  .container(); //left 16
   .set-container();
-  padding-top: 43px;
+  padding-top: 39px;//43
   padding-bottom: 42px;
   font-size: 14px;
   line-height: 30px;
@@ -28,5 +28,7 @@
 }
 
 .photo-upload--editor {
-  padding-bottom: 30px;
+  @media (min-width: @width-desktop) {
+    padding-bottom: 30px;
+  }
 }

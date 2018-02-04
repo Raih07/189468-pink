@@ -1,18 +1,32 @@
 .reviews {
   padding-top: 42px;
-  padding-bottom: 36px;
+  padding-bottom: 33px;
   background-color: @white;
 
   background-color: bisque;
 
   @media (min-width: @width-tablets) {
     padding-top: 71px;
-    padding-bottom: 15px;
+    padding-bottom: 12px;//15
   }
 
   @media (min-width: @width-desktop) {
+    position: relative;
     padding-top: 185px;
     padding-bottom: 41px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 72px;
+      left: 50%;
+      width: 79px;
+      height: 64px;
+      transform: translateX(-50%);
+      //margin-left: 2px;
+      background: url(../../img/icon-quotes.svg) no-repeat center;
+      background-size: 79px 64px;
+    }
   }
 }
 
@@ -37,6 +51,7 @@
   }
 
   @media (min-width: @width-tablets) {
+
     &--active {
       display: flex;
       flex-direction: column;
@@ -101,10 +116,10 @@
 }
 
 .reviews__toggles {
-  margin-top: 27px;
+  margin-top: 30px;
 
   @media (min-width: @width-tablets) {
-    margin-top: 31px;
+    margin-top: 34px;
   }
   @media (min-width: @width-desktop) {
     display: none;
@@ -122,7 +137,10 @@
   cursor: pointer;
   opacity: 0.3;
 
-  background-color: aqua;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 41px;
 
   &:hover {
     opacity: 0.6;
@@ -134,10 +152,12 @@
 
   &--prev {
     left: 0;
+    background-image: url("../../img/icon-review-arrow-left.svg");
   }
 
   &--next {
     right: 0;
+    background-image: url("../../img/icon-review-arrow-right.svg");
   }
 
   @media (min-width: @width-desktop) {
