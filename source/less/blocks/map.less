@@ -17,6 +17,7 @@
     background: url("../../img/bg-map-tablet@1x.jpg");
     background-position: center bottom -127px;
     background-size: 700px auto;
+    background-repeat: no-repeat;
 
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
@@ -29,6 +30,7 @@
     background: url("../../img/bg-map-desktop@1x.jpg");
     background-position: center bottom -197px;
     background-size: 1200px auto;
+    background-repeat: no-repeat;
 
     @media (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
@@ -47,6 +49,17 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% 33px;
+
+    /*
+    @media (min-width: @width-tablets) {
+      height: 68px;
+      background-size: 100% 68px;
+    }
+
+    @media (min-width: @width-desktop) {
+      height: 102px;
+      background-size: 100% 102px;
+    }*/
   }
 
   &::after {

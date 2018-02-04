@@ -4,6 +4,8 @@ var nav_toggle = document.getElementsByClassName('main-nav__toggle')[0];
 var main_header = document.getElementsByClassName('main-header')[0];
 var main_nav = document.getElementsByClassName('main-nav')[0];
 
+//main_header.classList.remove('main-header--nojs');
+//main_nav.classList.remove('main-nav--nojs');
 
 nav_toggle.addEventListener('click', function() {
   if (main_nav.classList.contains('main-nav--open')) {
