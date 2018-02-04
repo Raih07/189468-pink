@@ -92,7 +92,7 @@
     </header>
 
     <main class="page-main">
-      <header class="main-section">
+      <header class="main-section main-section--photo">
         <div class="main-section__inner main-section__inner--submain">
           <h1 class="main-section__title">Фотографии пользователей</h1>
         </div>
@@ -106,7 +106,13 @@
 
         <figure class="gallery__card-main photo-card photo-card--main">
           <a class="photo-card__picture photo-card__picture--main" href="#">
-            <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="фото Анны">
+            <picture>
+              <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 620px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="фото Анны">
+            </picture>
+            <!--
+            <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="фото Анны">-->
             <span class="photo-card__flag-photo-day">Панорама дня</span>
           </a>
           <div class="photo-card__main-photo-wrapper">
@@ -135,7 +141,13 @@
         <div class="gallery__list">
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="фото Левона">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="фото Левона">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="фото Левона">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -160,7 +172,13 @@
 
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="фото Антона">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="фото Антона">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="фото Антона">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -185,7 +203,13 @@
 
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="фото Бориса">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="фото Бориса">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="фото Бориса">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -210,7 +234,13 @@
 
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="фото Сергея">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="фото Сергея">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="фото Сергея">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -235,7 +265,13 @@
 
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="фото Максима">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="фото Максима">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="фото Максима">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -260,7 +296,13 @@
 
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
-              <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="фото Надежды">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="фото Надежды">
+              </picture>
+              <!--
+              <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="фото Надежды">-->
             </a>
             <figcaption class="photo-card__body">
               <div class="photo-card__header">
@@ -293,7 +335,13 @@
         <div class="photo-editor photo-upload--editor">
           <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="photo-editor__picture">
-              <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Обрабатываемое фото">
+              <picture>
+                <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+                <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
+              </picture>
+              <!--
+              <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Обрабатываемое фото">-->
             </div>
 
             <div class="photo-editor__body">
