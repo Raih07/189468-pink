@@ -56,6 +56,34 @@
   }
 }
 
+.features__box-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: url("../../img/bg-triangle-white.svg") no-repeat center top;
+    background-size: 100% 31px;
+    z-index: 0;
+
+    @media (min-width: @width-tablets) {
+      background-size: 100% 51px;
+    }
+
+    @media (min-width: @width-desktop) {
+      background-size: 100% 63px;
+    }
+  }
+
+  /*
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-position: center top;
+  background-size: 100% 31px;
+  background-repeat: no-repeat;*/
+}
+
 .features__wrapper {
   .container();
   .set-container();
