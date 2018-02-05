@@ -6,35 +6,38 @@
 
   @media (min-width: @width-tablets) {
     padding-top: 88px;
-    padding-bottom: 7px;
+    padding-bottom: 31px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 148px;
-    padding-bottom: 34px;
+    padding-top: 150px;//148
+    padding-bottom: 58px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: -3px;
+    top: 0;//-3
     left: 0;
     width: 100%;
-    height: 50%;
-    background: url("../../img/bg-triangle-white.svg") no-repeat center top;
-    background-size: 100% 31px;
+    height: 25px;//50%
+    background-image: linear-gradient(to right bottom, #ffffff 50%, green 50%);
+    //background: url("../../img/bg-triangle-white.svg") no-repeat center top;
+    //background-size: 100% 31px;
     z-index: 0;
 
     @media (min-width: @width-tablets) {
       top: 0;
-      left: -5px;
-      background-size: 100% 51px;
+      left: 0;//-5px
+      height: 50px;
+      //background-size: 100% 51px;
     }
 
     @media (min-width: @width-desktop) {
       top: 0;
       left: 0;
-      background-size: 100% 63px;
+      height: 81px;
+      //background-size: 100% 63px;
     }
   }
 }
@@ -289,5 +292,11 @@
       vertical-align: middle;
       margin-top: 3px;
     }
+  }
+}
+
+.price__toggles {
+  @media (min-width: @width-tablets) {
+    display: none;
   }
 }
