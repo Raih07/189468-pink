@@ -5,26 +5,34 @@
   }
 
   &--open .main-nav__list {
-    display: block;
+    @media (max-width: 1199px) {
+      display: block;
+    }
+
     margin-top: 3px;
 
     @media (min-width: @width-tablets) {    //может диапазон до десктопа(переносит block, mar-top:0)
       margin-top: 0;
     }
+/*
+    @media (min-width: @width-desktop) {
+      display: flex;
+    }*/
   }
 }
 /*****no--js****/
-/*
-@media (max-width: @width-desktop - 1) {
-  .main-nav--nojs .main-nav__list {
-    display: block;
-    margin-top: 3px;
 
-    @media (min-width: @width-tablets) {
-      margin-top: 0;
-    }
+.main-nav--nojs .main-nav__list {
+  @media (max-width: 1199px) {
+    display: block;
   }
-}*/
+  margin-top: 3px;
+
+  @media (min-width: @width-tablets) {
+    margin-top: 0;
+  }
+}
+/********************/
 
 .main-nav__list {
   .list-reset();
@@ -159,11 +167,8 @@
   }
 }
 
-/***no--js***/
-/*
-@media (max-width: @width-desktop - 1) {
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
+/***no--js для кнопки вызова меню***/
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
-*/
+/**********************/

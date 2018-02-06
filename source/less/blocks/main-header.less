@@ -29,23 +29,31 @@
     margin-bottom: -110px;
     }
   }
+
+  @media (min-width: @width-desktop) {
+    &--open,
+    &--close {
+      margin-bottom: -110px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 /***no--js***/
-/*
-@media (min-width: @width-mobile) {
-  .main-nav--nojs .main-header {
-    margin-bottom: -67px;
-    background-color: @dark-blue;
-  }
-}
+.main-header--nojs {
+  margin-bottom: -67px;
+  background-color: @dark-blue;
 
-@media (max-width: @width-desktop - 1) {
-  .main-nav--nojs .main-header {
+  @media (min-width: @width-tablets) {
     margin-bottom: -111px;
-    background-color: @dark-blue;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: -110px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
-*/
+/***************************/
+
 .main-header__wrapper {
   //position: relative;
   //.set-container();//наверно можно удалить
