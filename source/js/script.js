@@ -54,6 +54,15 @@ function init() {
   myMap.controls.add('zoomControl', {
     float: 'none'
   });
+  myMap.controls.add('fullscreenControl', {
+    float: 'right'
+  });
+
+  myMap.controls.add('typeSelector', {
+    float: 'left',
+    // Переключатель слоев карты – второй слева.
+  });
+  myMap.controls.get('typeSelector').options.set('size', 'small');//принудительно выбран маленькой мконки
 
   myPlacemark = new ymaps.Placemark([59.936280, 30.321076], {
     hintContent: 'PINK',
