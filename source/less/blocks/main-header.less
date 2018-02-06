@@ -76,35 +76,6 @@
   margin-left: 20px;
   fill: @white;
 
-  .main-header__logo-glas-deskt {
-    display: none;
-
-    @media (min-width: @width-desktop) {
-      display: inline;
-    }
-  }
-
-  .main-header__logo-glas-tab {
-    display: none;
-
-    @media (min-width: @width-tablets) {
-      display: inline;
-    }
-
-    @media (min-width: @width-desktop) {
-      display: none;
-    }
-  }
-
-  .main-header__logo-stars {
-    display: none;
-
-    @media (min-width: @width-desktop) {
-      display: inline;
-      fill: @pink;
-    }
-  }
-
   &:hover .main-header__logo-img {
     fill: @pink;
   }
@@ -132,5 +103,34 @@
   @media (min-width: @width-tablets) {
     margin-left: 0;
     margin-top: 0;
+  }
+}
+
+.main-header__logo-glas-deskt {
+  display: none;
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+  }
+}
+
+.main-header__logo-glas-tab {
+  display: none;
+
+  @media (min-width: @width-tablets) {
+    display: inline;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: none;
+  }
+}
+
+.main-header__logo-stars {
+  display: none;
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+    fill: @pink;
   }
 }
