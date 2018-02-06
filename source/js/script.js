@@ -34,3 +34,36 @@ nav_toggle.addEventListener('click', function() {
     nav_toogle_open.style.display = 'block';
   }*/
 });
+
+/*******Карта в подвале*********/
+
+ymaps.ready(init);
+var myMap, myPlacemar;
+
+function init() {
+
+  myMap = new ymaps.Map("YMapsID", {
+    center: [59.936280, 30.321076],
+    zoom: 16,
+    controls: [] //убираем все кнопки управления
+  });
+
+  myMap.behaviors.disable('scrollZoom'); //отключение зума скролом колесика
+  //myMap.behaviors.disable('drag');
+
+  myMap.controls.add('zoomControl', {
+    float: 'none'
+  });
+
+  myPlacemark = new ymaps.Placemark([59.936280, 30.321076], {
+    hintContent: 'PINK',
+    balloonContent: '191186, Санкт-Петербург, Невский пр., д.20'
+  }, {
+    iconLayout: 'default#image', //изображение без доп текста
+    iconImageHref: '../img/icon-map-marker.svg',
+    iconImageSize: [36, 36],
+    iconImageOffset: [-10, -10] //смещение картинки
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+}

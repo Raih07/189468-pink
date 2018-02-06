@@ -75,6 +75,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 36px 36px;
+    z-index: 0;
 
     @media (min-width: @width-tablets) {
       top: 51.7%;
@@ -98,7 +99,7 @@
     top: 0;
     width: 50%;
     height: 33px;
-    z-index: 0;
+    z-index: 2;
 
     @media (min-width: @width-tablets) {
       height: 68px;
@@ -118,4 +119,13 @@
     left: 0;
     background-image: linear-gradient(to left bottom, #000000 50%, transparent 50%);
   }
+}
+
+.map-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
