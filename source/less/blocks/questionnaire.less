@@ -311,7 +311,7 @@
   @media (min-width: @width-tablets) {
     &--phone-icon {
       &::after {
-        background-image: url("../../img/icon-phone.svg");
+        background-image: url("../img/icon-phone.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 20px 20px;
@@ -320,7 +320,7 @@
 
     &--mail-icon {
       &::after {
-        background-image: url("../../img/icon-mail.svg");
+        background-image: url("../img/icon-mail.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 18px 14px;
@@ -453,6 +453,7 @@
   font-size: 18px;
   line-height: 30px;
   color: @dark-blue;
+  user-select: none;
 
   @media (min-width: @width-desktop) {
     display: flex;
@@ -461,7 +462,7 @@
   }
 }
 
-.questionnaire-input + label:before {
+.questionnaire-input + label::before {
   content: "";
   position: absolute;
   left: -69px;
@@ -479,19 +480,19 @@
   }
 }
 
-.questionnaire-input-radio + label:before {
+.questionnaire-input-radio + label::before {
   border-radius: 50%;
 }
 
-.questionnaire-input:hover + label:before {
+.questionnaire-input:hover + label::before {
   border-color: @dark-blue;
 }
 
-.questionnaire-input:focus + label:before {
+.questionnaire-input:focus + label::before {
   border-color: @pink;
 }
 
-.questionnaire-input-checkbox:checked + label:after {
+.questionnaire-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   //top: 4px;
@@ -499,7 +500,7 @@
   left: -60px;
   width: 22px;
   height: 16px;
-  background: url(../../img/icon-checkbox.svg) no-repeat center;
+  background: url("../img/icon-checkbox.svg") no-repeat center;
   background-size: 22px 16px;
   z-index: 1;
   transform: translateY(-50%);
@@ -509,7 +510,7 @@
   }
 }
 
-.questionnaire-input-radio:checked + label:after {
+.questionnaire-input-radio:checked + label::after {
   content: "";
   position: absolute;
   //top: 5px;

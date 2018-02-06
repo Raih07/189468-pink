@@ -37,7 +37,7 @@
   outline: none;
   border: 3px solid rgb(40, 54, 69);
 }
-
+/*
 .social__btn {
   svg {
     position: absolute;
@@ -50,8 +50,45 @@
   &--youtube svg {
     transform: translateX(-40%) translateY(-50%);
   }
+}*/
+
+.social__btn {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	background-repeat: no-repeat;
+	background-position: center;
+  }
 }
 
-.social__btn:active svg {
+.social__btn {
+  &--tw::after {
+    width: 18px;
+	height: 14px;
+	background-image: url("../img/icon-twitter.svg");
+    background-size: 18px 14px;
+  }
+
+  &--fb::after {
+    width: 9px;
+	height: 18px;
+    transform: translateX(-50%) translateY(-60%);
+	background-image: url("../img/icon-facebook.svg");
+    background-size: 9px 18px;
+  }
+
+  &--youtube::after {
+    width: 15px;
+	height: 13px;
+    transform: translateX(-40%) translateY(-60%);
+	background-image: url("../img/icon-youtube.svg");
+    background-size: 15px 13px;
+  }
+
+}
+.social__btn:active {
   opacity: 0.3;
 }
