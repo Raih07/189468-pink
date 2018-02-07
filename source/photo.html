@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink фотоальбом</title>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -177,8 +181,8 @@
               <source type="image/webp" media="(min-width: 940px)" srcset="img/panorama-desktop@1x-webp.webp 1x, img/panorama-desktop@2x-webp.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="img/panorama-tablet@1x-webp.webp 1x, img/panorama-tablet@2x-webp.webp 2x">
               <source type="image/webp" srcset="img/panorama-mobile@1x-webp.webp 1x, img/panorama-mobile@2x-webp.webp 2x">
-              <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-              <source media="(min-width: 620px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+              <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 620px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
               <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="фото Анны">
             </picture>
             <!--
@@ -215,8 +219,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x-webp.webp 1x, img/photo-car-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-car-tablet@1x-webp.webp 1x, img/photo-car-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-car-mobile@1x-webp.webp 1x, img/photo-car-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="фото Левона">
               </picture>
               <!--
@@ -249,8 +253,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x-webp.webp 1x, img/photo-drumset-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x-webp.webp 1x, img/photo-drumset-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-drumset-mobile@1x-webp.webp 1x, img/photo-drumset-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="фото Антона">
               </picture>
               <!--
@@ -283,8 +287,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x-webp.webp 1x, img/photo-window-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-window-tablet@1x-webp.webp 1x, img/photo-window-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-window-mobile@1x-webp.webp 1x, img/photo-window-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="фото Бориса">
               </picture>
               <!--
@@ -317,8 +321,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x-webp.webp 1x, img/photo-fair-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x-webp.webp 1x, img/photo-fair-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-fair-mobile@1x-webp.webp 1x, img/photo-fair-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="фото Сергея">
               </picture>
               <!--
@@ -351,8 +355,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x-webp.webp 1x, img/photo-pov-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x-webp.webp 1x, img/photo-pov-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-pov-mobile@1x-webp.webp 1x, img/photo-pov-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="фото Максима">
               </picture>
               <!--
@@ -385,8 +389,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x-webp.webp 1x, img/photo-wing-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x-webp.webp 1x, img/photo-wing-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-wing-mobile@1x-webp.webp 1x, img/photo-wing-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="фото Надежды">
               </picture>
               <!--
@@ -427,8 +431,8 @@
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x-webp.webp 1x, img/photo-road-desktop@2x-webp.webp 2x">
                 <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-road-tablet@1x-webp.webp 1x, img/photo-road-tablet@2x-webp.webp 2x">
                 <source type="image/webp" srcset="img/photo-road-mobile@1x-webp.webp 1x, img/photo-road-mobile@2x-webp.webp 2x">
-                <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
                 <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
               </picture>
               <!--

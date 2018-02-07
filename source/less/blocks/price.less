@@ -77,6 +77,7 @@
   background-color: @white;
   border: 2px solid @dark-gray;
   border-top-width: 0;
+  //background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
 
   @media (min-width: @width-tablets) {
     padding: 6px 15px 8px;
@@ -163,6 +164,7 @@
   border-left: 2px solid @dark-gray;
   border-right: 2px solid @dark-gray;
   background-color: @dark-blue;
+  //background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
 
   &--hit::before {
     content: "";
