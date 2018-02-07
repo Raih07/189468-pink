@@ -70,7 +70,7 @@ if(document.getElementById('YMapsID')) {
       balloonContent: '191186, Санкт-Петербург, Невский пр., д.20'
     }, {
       iconLayout: 'default#image', //изображение без доп текста
-      iconImageHref: '../img/icon-map-marker.svg',
+      iconImageHref: 'img/icon-map-marker.svg',
       iconImageSize: [36, 36],
       iconImageOffset: [-10, -10] //смещение картинки
     });
