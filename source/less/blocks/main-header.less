@@ -13,7 +13,6 @@
   &--close {
     margin-bottom: -70px;
     margin-bottom: -66px;
-
     background-color: rgba(0, 0, 0, 0.3);
     //background-color: red;
   }
@@ -22,37 +21,48 @@
     min-height: 110px;
 
     &--open {
-    margin-bottom: -111px;
+      margin-bottom: -111px;
     }
 
     &--close {
-    margin-bottom: -110px;
+      margin-bottom: -110px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    &--open,
+    &--close {
+      margin-bottom: -110px;
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 }
 /***no--js***/
-/*
-@media (min-width: @width-mobile) {
-  .main-nav--nojs .main-header {
-    margin-bottom: -67px;
-    background-color: @dark-blue;
-  }
-}
+.main-header--nojs {
+  margin-bottom: -67px;
+  background-color: @dark-blue;
 
-@media (max-width: @width-desktop - 1) {
-  .main-nav--nojs .main-header {
+  @media (min-width: @width-tablets) {
     margin-bottom: -111px;
-    background-color: @dark-blue;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: -110px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
-*/
+/***************************/
+
 .main-header__wrapper {
   //position: relative;
   //.set-container();//наверно можно удалить
   //.container();
 
   @media (min-width: @width-desktop) {
-    .set-container();
+    width: 940px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,35 +77,6 @@
   margin-bottom: 22px;
   margin-left: 20px;
   fill: @white;
-
-  .main-header__logo-glas-deskt {
-    display: none;
-
-    @media (min-width: @width-desktop) {
-      display: inline;
-    }
-  }
-
-  .main-header__logo-glas-tab {
-    display: none;
-
-    @media (min-width: @width-tablets) {
-      display: inline;
-    }
-
-    @media (min-width: @width-desktop) {
-      display: none;
-    }
-  }
-
-  .main-header__logo-stars {
-    display: none;
-
-    @media (min-width: @width-desktop) {
-      display: inline;
-      fill: @pink;
-    }
-  }
 
   &:hover .main-header__logo-img {
     fill: @pink;
@@ -124,5 +105,34 @@
   @media (min-width: @width-tablets) {
     margin-left: 0;
     margin-top: 0;
+  }
+}
+
+.main-header__logo-glas-deskt {
+  display: none;
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+  }
+}
+
+.main-header__logo-glas-tab {
+  display: none;
+
+  @media (min-width: @width-tablets) {
+    display: inline;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: none;
+  }
+}
+
+.main-header__logo-stars {
+  display: none;
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+    fill: @pink;
   }
 }

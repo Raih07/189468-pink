@@ -1,16 +1,44 @@
 .price {
+  position: relative;
   padding-top: 91px;
   padding-bottom: 38px;
   background-color: @gray-white;
 
   @media (min-width: @width-tablets) {
     padding-top: 88px;
-    padding-bottom: 7px;
+    padding-bottom: 31px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 148px;
-    padding-bottom: 34px;
+    padding-top: 150px;//148
+    padding-bottom: 58px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;//-3
+    left: 0;
+    width: 100%;
+    height: 25px;//50%
+    background-image: linear-gradient(to right bottom, #ffffff 50%, green 50%);
+    //background: url("../img/bg-triangle-white.svg") no-repeat center top;
+    //background-size: 100% 31px;
+    z-index: 0;
+
+    @media (min-width: @width-tablets) {
+      top: 0;
+      left: 0;//-5px
+      height: 50px;
+      //background-size: 100% 51px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: 0;
+      left: 0;
+      height: 81px;
+      //background-size: 100% 63px;
+    }
   }
 }
 
@@ -49,6 +77,7 @@
   background-color: @white;
   border: 2px solid @dark-gray;
   border-top-width: 0;
+  //background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
 
   @media (min-width: @width-tablets) {
     padding: 6px 15px 8px;
@@ -69,6 +98,65 @@
     }
   }
 }
+
+.price__item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  //width: 31px;
+  //height: 31px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @width-tablets) {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.price__item {
+  &--avaible::after {
+    top: 20px;
+    right: 17px;
+    width: 31px;
+    height: 21px;
+    background-image: url("../img/icon-yes.svg");
+    background-size: 31px 21px;
+
+    @media (min-width: @width-tablets) {
+      height: 31px;
+      top: 2px;
+      left: -1px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: 3px;
+    }
+  }
+
+  &--no-avaible::after {
+    top: 15px;
+    right: 20px;
+    width: 27px;//31
+    height: 26px;//31
+    background-image: url("../img/icon-no.svg");
+    background-size: 27px 26px;
+
+    @media (min-width: @width-tablets) {
+      top: 1px;
+      left: -1px;
+    }
+
+    @media (min-width: @width-desktop) {
+      left: -2px;
+    }
+  }
+}
+
 .price__tariff {
   position: relative;
   padding: 16px 45px 20px;
@@ -76,6 +164,7 @@
   border-left: 2px solid @dark-gray;
   border-right: 2px solid @dark-gray;
   background-color: @dark-blue;
+  //background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
 
   &--hit::before {
     content: "";
@@ -84,14 +173,14 @@
     left: -2px;
     width: 74px;
     height: 73px;
-    background: url(../../img/bg-hit.svg) no-repeat center;
+    background: url("../img/bg-hit.svg") no-repeat center;
     background-size: 74px 73px;
 
     @media (min-width: @width-tablets) {
       width: 61px;
       height: 61px;
       left: 0;
-      background: url(../../img/bg-hit-tablet.svg) no-repeat top left;
+      background: url("../img/bg-hit-tablet.svg") no-repeat top left;
       background-size: 61px 61px;
     }
 
@@ -100,7 +189,7 @@
       left: 0;
       width: 74px;
       height: 73px;
-      background: url(../../img/bg-hit.svg) no-repeat center;
+      background: url("../img/bg-hit.svg") no-repeat center;
       background-size: 74px 73px;
     }
   }
@@ -176,6 +265,7 @@
     display: inline-block;
     font-size: 18px;
   }
+
   @media (min-width: @width-desktop) {
     font-size: 24px;
   }
@@ -218,7 +308,7 @@
     font-size: 18px;
   }
 }
-
+/*
 .price__avaible {
   position: absolute;
   display: block;
@@ -264,5 +354,11 @@
       vertical-align: middle;
       margin-top: 3px;
     }
+  }
+}*/
+
+.price__toggles {
+  @media (min-width: @width-tablets) {
+    display: none;
   }
 }

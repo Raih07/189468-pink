@@ -8,6 +8,7 @@
     padding-top: 92px;
     padding-bottom: 48px;
   }
+
   @media (min-width: @width-desktop) {
     padding-bottom: 0;
   }
@@ -82,6 +83,7 @@
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 52px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -93,6 +95,7 @@
 
   &--name {
     background-color: @white;
+
     @media (min-width: @width-tablets) {
       padding-bottom: 0;
       order: 0;
@@ -108,6 +111,7 @@
     padding-top: 99px;
     padding-bottom: 47px;
     background-color: @gray-white;
+
     @media (min-width: @width-tablets) {
       padding-top: 41px;
       padding-left: 58px;
@@ -131,6 +135,7 @@
   &--contacts {
     padding-top: 32px;
     background-color: @white;
+
     @media (min-width: @width-tablets) {
       padding-top: 30px;
       padding-left: 58px;
@@ -149,6 +154,7 @@
 
     .questionnaire__item-tittle {
       display: none;
+
       @media (min-width: @width-tablets) {
         display: block;
       }
@@ -182,6 +188,7 @@
   &--feeling {
     padding-top: 54px;
     background-color: @white;
+
     @media (min-width: @width-tablets) {
       padding-top: 30px;
       padding-left: 58px;
@@ -234,6 +241,7 @@
   &--feeling {
     position: relative;
     top: 38px;
+
     @media (min-width: @width-tablets) {
       padding: 0 38px;
     }
@@ -264,6 +272,7 @@
       align-items: center;
       margin-bottom: 52px;
     }
+
     @media (min-width: @width-desktop) {
       margin-bottom: 54px;
     }
@@ -311,7 +320,7 @@
   @media (min-width: @width-tablets) {
     &--phone-icon {
       &::after {
-        background-image: url("../../img/icon-phone.svg");
+        background-image: url("../img/icon-phone.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 20px 20px;
@@ -320,7 +329,7 @@
 
     &--mail-icon {
       &::after {
-        background-image: url("../../img/icon-mail.svg");
+        background-image: url("../img/icon-mail.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 18px 14px;
@@ -339,6 +348,7 @@
 
   &--name {
     margin-bottom: 4px;
+
     @media (min-width: @width-tablets) {
       margin-left: 0;
       margin-right: 18px;
@@ -348,6 +358,7 @@
 
   &--contact {
     margin-bottom: 5px;
+
     @media (min-width: @width-tablets) {
       margin-bottom: 0;
       margin-top: 10px;
@@ -371,6 +382,7 @@
 
 .questionnaire__area {
   min-height: 201px;
+
   @media (min-width: @width-tablets) {
     min-height: 193px;
     padding: 14px 18px;
@@ -415,6 +427,7 @@
 
 .questionnaire__col--apps .questionnaire__option {
   margin-bottom: 45px;
+
   @media (min-width: @width-desktop) {
     margin-bottom: 31px;
   }
@@ -453,6 +466,7 @@
   font-size: 18px;
   line-height: 30px;
   color: @dark-blue;
+  user-select: none;
 
   @media (min-width: @width-desktop) {
     display: flex;
@@ -461,7 +475,7 @@
   }
 }
 
-.questionnaire-input + label:before {
+.questionnaire-input + label::before {
   content: "";
   position: absolute;
   left: -69px;
@@ -479,19 +493,19 @@
   }
 }
 
-.questionnaire-input-radio + label:before {
+.questionnaire-input-radio + label::before {
   border-radius: 50%;
 }
 
-.questionnaire-input:hover + label:before {
+.questionnaire-input:hover + label::before {
   border-color: @dark-blue;
 }
 
-.questionnaire-input:focus + label:before {
+.questionnaire-input:focus + label::before {
   border-color: @pink;
 }
 
-.questionnaire-input-checkbox:checked + label:after {
+.questionnaire-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   //top: 4px;
@@ -499,7 +513,7 @@
   left: -60px;
   width: 22px;
   height: 16px;
-  background: url(../../img/icon-checkbox.svg) no-repeat center;
+  background: url("../img/icon-checkbox.svg") no-repeat center;
   background-size: 22px 16px;
   z-index: 1;
   transform: translateY(-50%);
@@ -509,7 +523,7 @@
   }
 }
 
-.questionnaire-input-radio:checked + label:after {
+.questionnaire-input-radio:checked + label::after {
   content: "";
   position: absolute;
   //top: 5px;
@@ -532,6 +546,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 17px;
+
   @media (min-width: @width-tablets) {
     padding-left: 0;
     padding-right: 0;
@@ -542,6 +557,7 @@
     align-items: baseline;
     order: 5;
   }
+
   @media (min-width: @width-desktop) {
     margin-top: 65px;
   }
@@ -556,8 +572,8 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px #fff,
-	0 0 6px 6px @dark-green;
+    box-shadow: 0 0 0 3px #ffffff,
+      0 0 6px 6px @dark-green;
   }
 
   &:active {
