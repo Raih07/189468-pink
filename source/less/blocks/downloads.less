@@ -9,7 +9,6 @@
     width: 300px;
     z-index: 3;
   }
-
 }
 
 .downloads__slogan {
@@ -68,6 +67,7 @@
   @media (min-width: @width-tablets) {
     margin-bottom: 36px;
   }
+
   @media (min-width: @width-desktop) {
     margin-bottom: 55px;
   }
@@ -84,22 +84,24 @@
   &--ios {
     background-image: url("../img/logo-apple.svg");
   }
+
   &--android {
     background-image: url("../img/logo-android.svg");
     background-position: 1px 8px;
-
   }
+
   &--win {
     background-image: url("../img/logo-microsoft.svg");
     background-position: center 11px;
   }
+
   &:last-child {
     margin-right: 0;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px #fff,
+    box-shadow: 0 0 0 3px #ffffff,
       0 0 6px 6px @dark-blue;
   }
 }
