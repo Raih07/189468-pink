@@ -62,8 +62,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "sourse/fonts/**/*.{woff,woff2}",
     "sourse/img/**",
-    "sourse/js/**",
-    "sourse/*.html"
+    "sourse/js/**"
   ], {
     base: "sourse"
   })
@@ -94,13 +93,13 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html"), ["html"]);
+  gulp.watch("source/*.html", ["html"]);
 });
 
 gulp.task("build", function(done) {
   run(
     "clean",
-    "copy"
+    "copy",
     "style",
     "sprite",
     "html",
