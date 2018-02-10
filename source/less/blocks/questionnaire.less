@@ -73,13 +73,14 @@
 .questionnaire__col {
   box-sizing: border-box;
   .mar-pad-reset();
-  padding-top: 35px;
+  padding-top: 34px;
   padding-bottom: 24px;
   .container();
   border: none;
 
 
   @media (min-width: @width-tablets) {
+    padding-top: 35px;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 52px;
@@ -149,20 +150,13 @@
       //display: flex;
       //justify-content: space-between;
       width: 100%;
-      padding-bottom: 12px;
-    }
-
-    .questionnaire__item-tittle {
-      display: none;
-
-      @media (min-width: @width-tablets) {
-        display: block;
-      }
+      padding-top: 29px;
+      padding-bottom: 13px;//12
     }
   }
 
   &--apps {
-    padding-top: 94px;
+    padding-top: 95px;
     padding-bottom: 47px;
     background-color: @gray-white;
 
@@ -178,9 +172,9 @@
 
     @media (min-width: @width-desktop) {
       width: 435px;
-      width: 438px;//с этой шириной legend в одну строку
       padding-top: 38px;
-      padding-left: 58px;
+      padding-left: 0;
+      padding-right: 0;
       padding-bottom: 54px;
     }
   }
@@ -231,11 +225,6 @@
     @media (min-width: @width-tablets) {
       padding: 0 25px;
     }
-
-    @media (min-width: @width-desktop) {
-      padding: 0;
-      //width: 340px;
-    }
   }
 
   &--feeling {
@@ -248,7 +237,9 @@
   }
 
   &--contacts {
+    display: none;
     @media (min-width: @width-tablets) {
+      display: inline-block;
       padding: 0 31px;
     }
   }
@@ -260,7 +251,7 @@
 }
 
 .questionnaire__group {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
   &:last-child {
     margin-bottom: 0;
@@ -293,7 +284,7 @@
     @media (min-width: @width-desktop) {
       display: inline-flex;
       width: 375px;
-      margin-right: 65px;
+      margin-right: 66px;
       margin-bottom: 0;
 
       &:last-child {
@@ -347,7 +338,7 @@
   text-transform: uppercase;
 
   &--name {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 
     @media (min-width: @width-tablets) {
       margin-left: 0;
@@ -430,6 +421,8 @@
 
   @media (min-width: @width-desktop) {
     margin-bottom: 31px;
+    padding-left: 133px;
+    padding-right: 20px;
   }
 
   &:last-child {
