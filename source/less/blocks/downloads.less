@@ -26,7 +26,7 @@
 
   @media (min-width: @width-desktop) {
     width: 255px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;//50
     font-size: 50px;
     line-height: 60px;
   }
@@ -81,18 +81,39 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: @width-tablets) {
+    margin-right: 34px;
+  }
+
   &--ios {
     background-image: url("../img/logo-apple.svg");
+    //background-position: 1px 8px;
   }
 
   &--android {
     background-image: url("../img/logo-android.svg");
     background-position: 1px 8px;
+
+    @media (min-width: @width-tablets) {
+      background-position: 2px 6px;
+    }
+
+    @media (min-width: @width-desktop) {
+      background-position: 1px 8px;
+    }
   }
 
   &--win {
     background-image: url("../img/logo-microsoft.svg");
-    background-position: center 11px;
+    background-position: 1px 12px;
+
+    @media (min-width: @width-tablets) {
+      background-position: -1px 12px;
+    }
+
+    @media (min-width: @width-desktop) {
+      background-position: 0 12px;
+    }
   }
 
   &:last-child {
