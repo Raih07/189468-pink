@@ -238,6 +238,7 @@
 
   &--contacts {
     display: none;
+
     @media (min-width: @width-tablets) {
       display: inline-block;
       padding: 0 31px;
@@ -307,24 +308,22 @@
   }
 }
 
-.questionnaire__group {
-  @media (min-width: @width-tablets) {
-    &--phone-icon {
-      &::after {
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 20px 20px;
-      }
+@media (min-width: @width-tablets) {
+  .questionnaire__group--phone-icon {
+    &::after {
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
     }
+  }
 
-    &--mail-icon {
-      &::after {
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 18px 14px;
-      }
+  .questionnaire__group--mail-icon {
+    &::after {
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px 14px;
     }
   }
 }
@@ -448,7 +447,7 @@
       margin-left: 10px;
     }
   }
-/*
+  /*
   .questionnaire__col--achiev .questionnaire__option:last-child {
     margin-bottom: 50px;
   }*/
@@ -596,7 +595,7 @@
   //top: 0px;
   //font-size: 14.5px;
   color: @pink;
-/*
+  /*
   @media (min-width: @width-tablets) {
     top: 1px;
     left: 1px;
