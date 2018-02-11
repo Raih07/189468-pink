@@ -106,8 +106,7 @@
   color: @pink;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: @dark-blue;
     text-decoration: underline;
   }
@@ -115,5 +114,10 @@
   &:active {
     opacity: 0.3;
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid @pink;
+    //outline-offset: 4px;
   }
 }

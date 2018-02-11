@@ -29,6 +29,9 @@
   }
 }
 
-.copyright__logo-link:focus .copyright__logo-img {
-  fill: @dark-blue;
+.copyright__logo-link {
+  &:focus {
+    outline: 2px solid @pink;
+    outline-offset: 4px;
+  }
 }

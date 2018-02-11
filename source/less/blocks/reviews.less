@@ -139,7 +139,6 @@
   border: none;
   cursor: pointer;
   opacity: 0.3;
-
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -151,6 +150,11 @@
 
   &:active {
     opacity: 0.1;
+  }
+
+  &:focus {
+    outline: 2px solid @dark-blue;
+    outline-offset: 4px;
   }
 
   &--prev {

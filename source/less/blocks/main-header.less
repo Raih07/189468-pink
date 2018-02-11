@@ -76,6 +76,7 @@
   margin-bottom: 22px;
   margin-left: 20px;
   fill: @white;
+  outline: none;
 
   &:hover .main-header__logo-img {
     fill: @pink;
@@ -83,6 +84,10 @@
 
   &:active .main-header__logo-img {
     fill: rgba(210, 40, 86, 0.3);
+  }
+
+  &:focus .main-header__logo-img {
+    fill: @pink;
   }
 
   @media (min-width: @width-tablets) {

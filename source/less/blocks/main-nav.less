@@ -125,6 +125,7 @@
   .mar-pad-reset();
   border: none;
   background-color: transparent;
+  outline: none;
 
   @media (min-width: @width-tablets) {
     top: 44px;
@@ -138,7 +139,8 @@
     fill: @white;
   }
 
-  &:hover svg {
+  &:hover svg,
+  &:focus svg {
     fill: @pink;
   }
 
