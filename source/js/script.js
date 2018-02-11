@@ -1,3 +1,17 @@
+document.body.onkeydown = function(event) {
+  if (event.keyCode === 9) {  // TAB
+    document.body.classList.add('tab-user');
+
+    document.addEventListener('click', function() {
+      document.body.classList.remove('tab-user');
+    });
+  }
+};
+
+document.removeEventListener('click', function() {
+  document.body.classList.remove('tab-user');
+});
+
 var nav_toggle = document.getElementsByClassName('main-nav__toggle')[0];
 //var nav_toogle_open = document.getElementsByClassName('main-nav__toggle--open')[0];
 //var nav_toogle_close = document.getElementsByClassName('main-nav__toggle--close')[0];

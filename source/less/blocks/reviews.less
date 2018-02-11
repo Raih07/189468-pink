@@ -152,10 +152,11 @@
     opacity: 0.1;
   }
 
+  /*
   &:focus {
     outline: 2px solid @dark-blue;
     outline-offset: 4px;
-  }
+  }*/
 
   &--prev {
     left: 0;
@@ -169,5 +170,12 @@
 
   @media (min-width: @width-desktop) {
     display: block;
+  }
+}
+
+.tab-user .reviews__btn {
+  &:focus {
+    outline: 2px solid @dark-blue;
+    outline-offset: 4px;
   }
 }
