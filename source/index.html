@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
     <!--<link href="css/normalize.css" rel="stylesheet">-->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="img/bg-back-desktop@2x.jpg" as="image">
+    <link rel="preload" href="img/bg-back-desktop@1x.jpg" as="image">
+    <link rel="preload" href="img/iphone-hand-desktop@2x.png" as="image">
+    <link rel="preload" href="img/iphone-hand-desktop@1x.png" as="image">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <!--
@@ -454,6 +462,6 @@
       </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
