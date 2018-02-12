@@ -39,6 +39,19 @@
   &--main {
     position: relative;
   }
+
+  /*
+  &:focus {
+    outline: none;
+    box-shadow: 0 -2px 18px 2px rgba(0, 0, 0, 0.72);
+  }*/
+}
+
+.tab-user .photo-card__picture {
+  &:focus {
+    outline: none;
+    box-shadow: 0 -2px 18px 2px rgba(0, 0, 0, 0.72);
+  }
 }
 
 .photo-card__img {
@@ -60,14 +73,12 @@
   background-color: @pink;
 
   @media (min-width: @width-tablets) {
-    left: 75.7%;
     left: auto;
     right: calc(~"(100vw - 620px) / 2");
     top: 57px;
   }
 
   @media (min-width: @width-desktop) {
-    left: 77.5%;
     left: auto;
     right: calc(~"(100vw - 940px) / 2");
     top: 54px;
@@ -172,19 +183,35 @@
   width: 13px;
   height: 12px;
   border: none;
+  border-radius: 2px;
   background-color: transparent;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 13px 12px;
+  outline: none;
+
+  /*
+  &:focus {
+    box-shadow: 0 0 0 4px @gray-white,
+      0 0 6px 7px @pink;
+  }*/
 
   @media (min-width: @width-tablets) {
     margin-right: 0;
   }
-/*
+
+  /*
   svg {
     fill: @pink;
   }*/
+}
+
+.tab-user .photo-card__like-btn {
+  &:focus {
+    box-shadow: 0 0 0 4px @gray-white,
+      0 0 6px 7px @pink;
+  }
 }
 
 .photo-card__count-item {

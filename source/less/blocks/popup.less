@@ -1,21 +1,13 @@
 .popup {
-  &--success {
-    display: none;
-  }
-
-  &--error {
-    display: none;
-  }
-
-  box-sizing: border-box;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  box-sizing: border-box;
   width: 320px;
   text-align: center;
   background-color: @white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  transform: translate(-50%, -50%);
   z-index: 1000;
 
   @media (min-width: @width-tablets) {
@@ -31,6 +23,14 @@
   }
 }
 
+.popup--open {
+  display: block;
+}
+
+.popup--close {
+  display: none;
+}
+
 .popup__body {
   padding-left: 20px;
   padding-right: 20px;
@@ -38,15 +38,15 @@
   background-color: cadetblue;//удалить
 
   &--success {
-    padding-top: 37px;
-    padding-bottom: 32px;
+    padding-top: 39px;//38
+    padding-bottom: 31px;//32
 
     @media (min-width: @width-tablets) {
-      padding: 35px 76px 34px;
+      padding: 36px 76px 32px;
     }
 
     @media (min-width: @width-desktop) {
-      padding: 40px 160px 38px;
+      padding: 41px 160px 38px;
     }
   }
 
@@ -55,7 +55,7 @@
     padding-bottom: 0;
 
     @media (min-width: @width-tablets) {
-      padding: 35px 76px 5px;
+      padding: 36px 76px 5px;
     }
   }
 }
@@ -101,12 +101,13 @@
     background-color: red;//удалить
 
     @media (min-width: @width-tablets) {
-      padding: 48px 80px 52px;
+      padding: 49px 80px 52px;
     }
 
     @media (min-width: @width-desktop) {
       padding-left: 160px;
       padding-right: 160px;
+      padding-bottom: 51px;
     }
   }
 

@@ -52,10 +52,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  @media (min-width: @width-desktop) {
-
-  }
 }
 
 .contacts__item {
@@ -110,8 +106,7 @@
   color: @pink;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: @dark-blue;
     text-decoration: underline;
   }
@@ -119,5 +114,18 @@
   &:active {
     opacity: 0.3;
     text-decoration: none;
+  }
+
+  /*
+  &:focus {
+    outline: 2px solid @pink;
+    //outline-offset: 4px;
+  }*/
+}
+
+.tab-user .contacts__text {
+  &:focus {
+    outline: 2px solid @pink;
+    //outline-offset: 4px;
   }
 }

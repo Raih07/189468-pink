@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink фотоальбом</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <!--<link href="css/normalize.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
@@ -12,6 +12,7 @@
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
+    <!--
     <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <symbol id="copyright-logo" viewBox="0 0 26.943 34.09">
         <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
@@ -115,13 +116,17 @@
       <symbol id="toogle-close" viewBox="0 0 23.867 23.867">
         <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
       </symbol>
-    </svg>
+    </svg>-->
+
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="main-header main-header--close main-header--nojs">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
           <svg class="main-header__logo-img" alt="Логотип Pink" width="147" height="40" version="1.1"  x="0px" y="0px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-            <use xlink:href="#header-logo"></use>
+            <use xlink:href="#sprite-header-logo"></use>
           </svg>
           <!--
           <svg class="main-header__logo-img" alt="Логотип Pink" width="75" height="22" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -136,11 +141,11 @@
         <nav class="main-nav main-nav--close main-nav--nojs">
           <button class="main-nav__toggle main-nav__toggle--open" type="button" aria-label="Открытие и закрытие меню">
             <svg class="main-nav__icon main-nav__icon--open" version="1.0" x="0px" y="0px" width="50" height="24" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
-              <use xlink:href="#toogle-open"></use>
+              <use xlink:href="#sprite-icon-menu-burger"></use>
             </svg>
 
             <svg class="main-nav__icon main-nav__icon--close" version="1.0" x="0px" y="0px" width="24" height="23" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
-              <use xlink:href="#toogle-close"></use>
+              <use xlink:href="#sprite-icon-menu-cross"></use>
             </svg>
           </button>
         <!--
@@ -179,9 +184,9 @@
         <figure class="gallery__card-main photo-card photo-card--main">
           <a class="photo-card__picture photo-card__picture--main" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/panorama-desktop@1x-webp.webp 1x, img/panorama-desktop@2x-webp.webp 2x">
-              <source type="image/webp" media="(min-width: 620px)" srcset="img/panorama-tablet@1x-webp.webp 1x, img/panorama-tablet@2x-webp.webp 2x">
-              <source type="image/webp" srcset="img/panorama-mobile@1x-webp.webp 1x, img/panorama-mobile@2x-webp.webp 2x">
+              <source type="image/webp" media="(min-width: 940px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 620px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 620px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
               <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="фото Анны">
@@ -217,9 +222,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x-webp.webp 1x, img/photo-car-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-car-tablet@1x-webp.webp 1x, img/photo-car-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-car-mobile@1x-webp.webp 1x, img/photo-car-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="фото Левона">
@@ -251,9 +256,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x-webp.webp 1x, img/photo-drumset-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x-webp.webp 1x, img/photo-drumset-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-drumset-mobile@1x-webp.webp 1x, img/photo-drumset-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="фото Антона">
@@ -285,9 +290,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x-webp.webp 1x, img/photo-window-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-window-tablet@1x-webp.webp 1x, img/photo-window-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-window-mobile@1x-webp.webp 1x, img/photo-window-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="фото Бориса">
@@ -319,9 +324,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x-webp.webp 1x, img/photo-fair-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x-webp.webp 1x, img/photo-fair-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-fair-mobile@1x-webp.webp 1x, img/photo-fair-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="фото Сергея">
@@ -353,9 +358,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x-webp.webp 1x, img/photo-pov-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x-webp.webp 1x, img/photo-pov-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-pov-mobile@1x-webp.webp 1x, img/photo-pov-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="фото Максима">
@@ -387,9 +392,9 @@
           <figure class="gallery__item photo-card photo-card--submain">
             <a class="photo-card__picture photo-card__picture" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x-webp.webp 1x, img/photo-wing-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x-webp.webp 1x, img/photo-wing-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-wing-mobile@1x-webp.webp 1x, img/photo-wing-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                 <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="фото Надежды">
@@ -429,9 +434,9 @@
           <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="photo-editor__picture">
               <picture>
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x-webp.webp 1x, img/photo-road-desktop@2x-webp.webp 2x">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-road-tablet@1x-webp.webp 1x, img/photo-road-tablet@2x-webp.webp 2x">
-                <source type="image/webp" srcset="img/photo-road-mobile@1x-webp.webp 1x, img/photo-road-mobile@2x-webp.webp 2x">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
                 <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
@@ -447,7 +452,7 @@
                 <div class="photo-editor__control photo-editor__control--crop">
                   <button class="photo-editor__btn photo-editor__btn--active photo-editor__btn--crop" type="button" aria-label="Обрезка фотографии">
                     <svg version="1.0" x="0px" y="0px" width="48" height="48" enable-background="new 0 0 48 48" xml:space="preserve">
-                      <use xlink:href="#crop-icon"></use>
+                      <use xlink:href="#sprite-icon-editor-crop"></use>
                     </svg>
                   </button>
                   <div class="photo-editor__bar photo-editor__bar--crop photo-editor__bar--active">
@@ -459,7 +464,7 @@
                 <div class="photo-editor__control photo-editor__control--saturate">
                   <button class="photo-editor__btn photo-editor__btn--saturate" type="button" aria-label="Насыщенность фотографии">
                     <svg version="1.0" x="0px" y="0px" width="48" height="48" enable-background="new 0 0 48 48" xml:space="preserve">
-                      <use xlink:href="#saturate-icon"></use>
+                      <use xlink:href="#sprite-icon-editor-fill"></use>
                     </svg>
                   </button>
                   <div class="photo-editor__bar photo-editor__bar--saturate">
@@ -471,7 +476,7 @@
                 <div class="photo-editor__control photo-editor__control--bright">
                   <button class="photo-editor__btn photo-editor__btn--bright" type="button" aria-label="Яркость фотографии">
                     <svg version="1.0" x="0px" y="0px" width="31.92" height="31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
-                      <use xlink:href="#bright-icon"></use>
+                      <use xlink:href="#sprite-icon-editor-contrast"></use>
                     </svg>
                   </button>
                   <div class="photo-editor__bar photo-editor__bar--bright">
@@ -533,7 +538,7 @@
     <footer class="main-footer">
       <div class="main-footer__logo">
         <svg class="main-footer__logo-img" alt="Логотип Pink" width="147" height="40" version="1.1"  x="0px" y="0px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-          <use xlink:href="#footer-logo"></use>
+          <use xlink:href="#sprite-footer-logo"></use>
         </svg>
         <!--
         <svg class="main-footer__logo-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
@@ -575,7 +580,7 @@
         <span class="copyright__text">Разработано</span>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
           <svg class="copyright__logo-img" version="1.0" x="0px" y="0px" width="26.943" height="34.09"  enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <use xlink:href="#copyright-logo"></use>
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
