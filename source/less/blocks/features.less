@@ -1,7 +1,6 @@
 .features {
   color: @dark-blue;
   background-color: @gray-white;
-  background-color: red;
 }
 
 .features__tittle {
@@ -23,7 +22,7 @@
 
   @media (min-width: @width-desktop) {
     padding-top: 67px;
-    padding-bottom: 76px;
+    padding-bottom: 79px;
     font-size: 50px;
     line-height: 60px;
   }
@@ -62,7 +61,7 @@
     left: 0;
     width: 100%;
     height: 33px;
-    background-image: linear-gradient(to right bottom, #ffffff 50%, green 50%);
+    background-image: linear-gradient(to right bottom, #ffffff 50%, @gray-white 50%);
     z-index: 0;
 
     @media (min-width: @width-tablets) {
@@ -70,7 +69,7 @@
     }
 
     @media (min-width: @width-desktop) {
-      top: 3px;
+      top: 0;
       height: 92px;
     }
   }
@@ -186,41 +185,50 @@
   }
 
   @media (min-width: @width-desktop) {
+    position: relative;
     width: 300px;
-    padding: 357px 30px 0;
+    padding: 354px 30px 0;
     margin-right: 20px;
     margin-bottom: 0;
     text-align: center;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 292px auto;
 
     &::after {
-      display: none;
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 100%;
+      height: 302px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 292px auto;
     }
 
     &:last-child {
       margin-right: 0;
     }
 
-    &--mood {
+    &--mood::after {
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
+      background-position: 4px top;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/iphone-screen-1-desktop@2x.png");
       }
     }
 
-    &--world {
+    &--world::after {
       background-image: url("../img/iphone-screen-2-desktop@1x.png");
+      background-position: 7px top;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/iphone-screen-2-desktop@2x.png");
       }
     }
 
-    &--friends {
+    &--friends::after {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
+      background-position: 7px top;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/iphone-screen-3-desktop@2x.png");
@@ -268,19 +276,15 @@
 
   @media (min-width: @width-tablets) {
     display: block;
-    padding-top: 58px;
-    padding-bottom: 26px;
+    padding-top: 59px;
+    padding-bottom: 25px;
     background-color: @white;
-
-    background-color: aquamarine;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 22px;
+    padding-top: 23px;
     padding-bottom: 67px;
     background-color: @gray-white;
-
-    background-color: aquamarine;
   }
 }
 
@@ -294,17 +298,16 @@
   position: relative;
   width: 239px;
   height: 276px;
-  background-color: yellow;
   background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
   background-repeat: no-repeat;
-  background-position: center top 56px, center;
+  background-position: center top 55px, center;
   background-size: 202px 202px, 239px 276px;
 
   &::after {
     content: "24";
     position: absolute;
-    top: 77px;
-    left: 50%;
+    top: 76px;
+    left: 49.7%;
     font-size: 96px;
     font-weight: 700;
     line-height: 149.47px;
@@ -315,11 +318,12 @@
   @media (min-width: @width-desktop) {
     width: 299px;
     height: 345px;
-    background-position: center top 70px, center;
+    background-position: center top 69px, center;
     background-size: 253px 253px, 299px 345px;
 
     &::after {
-      top: 97px;
+      top: 96px;
+      left: 49.5%;
       font-size: 120px;
       font-weight: 700;
       line-height: 186.84px;
@@ -329,13 +333,13 @@
 
 .features__period-container {
   @media (min-width: @width-tablets) {
-    padding-top: 38px;
-    padding-bottom: 28px;
+    padding-top: 37px;
+    padding-bottom: 29px;
     width: 311px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 92px;
+    padding-top: 91px;
     padding-bottom: 48px;
     width: 574px;
   }
