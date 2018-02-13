@@ -17,33 +17,24 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;//-3
+    top: 0;
     left: 0;
     width: 100%;
-    height: 25px;//50%
+    height: 25px;
     background-image: linear-gradient(to right bottom, #ffffff 50%, green 50%);
-    //background: url("../img/bg-triangle-white.svg") no-repeat center top;
-    //background-size: 100% 31px;
     z-index: 0;
 
     @media (min-width: @width-tablets) {
-      top: 0;
-      left: 0;//-5px
       height: 50px;
-      //background-size: 100% 51px;
     }
 
     @media (min-width: @width-desktop) {
-      top: 0;
-      left: 0;
       height: 81px;
-      //background-size: 100% 63px;
     }
   }
 }
 
 .price__wrapper {
-  //.container();
   .set-container();
   overflow: hidden;
 
@@ -66,18 +57,15 @@
 }
 
 .price__item {
-  //display: flex;
-  //justify-content: space-between;
   position: relative;
   padding-top: 18px;
   padding-left: 22px;
   padding-right: 66px;
   padding-bottom: 17px;
-  //vertical-align: middle;
   background-color: @white;
   border: 2px solid @dark-gray;
   border-top-width: 0;
-  background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
+  background-clip: padding-box;
 
   @media (min-width: @width-tablets) {
     padding: 6px 15px 8px;
@@ -103,8 +91,6 @@
   content: "";
   position: absolute;
   display: block;
-  //width: 31px;
-  //height: 31px;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -162,7 +148,7 @@
   border-left: 2px solid @dark-gray;
   border-right: 2px solid @dark-gray;
   background-color: @dark-blue;
-  background-clip: padding-box; //для firefox, edge чтобы были рамки у ячеек(их нет из-за relative)
+  background-clip: padding-box;
 
   &--hit::before {
     content: "";
@@ -198,8 +184,7 @@
     padding-right: 20px;
     padding-bottom: 8px;
     width: 25%;
-
-    border-bottom: 2px solid @dark-blue; //дописал
+    border-bottom: 2px solid @dark-blue;
   }
 
   @media (min-width: @width-desktop) {
@@ -211,7 +196,7 @@
 @media (min-width: @width-tablets) {
   .price__tariff + .price__tariff {
     border-left: 2px solid transparent;
-    //border-right: 2px solid transparent; //чтобы не было нижний перегородки у правых двух синих ячеек
+    //border-right: 2px solid transparent;
   }
 
   .price__tariff {
@@ -291,7 +276,6 @@
 }
 
 .price__item-name {
-  //width: 70%;
   font-size: 14px;
   line-height: 30px;
   color: @dark-blue;
@@ -306,54 +290,6 @@
     font-size: 18px;
   }
 }
-/*
-.price__avaible {
-  position: absolute;
-  display: block;
-  top: 20px;
-  right: 17px;
-  width: 31px;
-  height: 31px;
-  //text-align: center;
-  vertical-align: middle;
-  //background-position: center;
-  //background-repeat: no-repeat;
-
-  &--no {
-    top: 15px;
-    right: 16px;
-  }
-
-  &--yes svg {
-    //background-image: url("../../img/icon-yes.svg");
-    fill: @btn-yes;
-
-  }
-
-  &--no svg{
-    //background-image: url("../../img/icon-no.svg");
-    fill: @btn-no;
-  }
-
-  @media (min-width: @width-tablets) {
-    position: relative;
-    top: auto;
-    right: auto;
-    left: auto;
-    margin-left: auto;
-    margin-right: auto;
-
-    &--yes svg {
-      vertical-align: middle;
-      margin-top: 7px;
-    }
-
-    &--no svg {
-      vertical-align: middle;
-      margin-top: 3px;
-    }
-  }
-}*/
 
 .price__toggles {
   @media (min-width: @width-tablets) {

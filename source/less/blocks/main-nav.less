@@ -11,7 +11,7 @@
 
     margin-top: 3px;
 
-    @media (min-width: @width-tablets) {    //может диапазон до десктопа(переносит block, mar-top:0)
+    @media (min-width: @width-tablets) {
       margin-top: 0;
     }
 
@@ -37,23 +37,15 @@
 
 .main-nav__list {
   .list-reset();
-  //margin-top: 4px;
-  //display: flex;
   flex-direction: column;
   display: none;
   border-top: 1px solid #000000;
-
-  @media (min-width: @width-tablets) {
-    //margin-top: 26px;
-  }
 
   @media (min-width: @width-desktop) {
     margin-top: 0;
     display: flex;
     flex-direction: row;
-    //justify-content: flex-end;
     flex-wrap: wrap;
-    //width: 620px;
     border: none;
   }
 }
@@ -129,19 +121,17 @@
   }*/
 
   &:active {
-    //color: rgba(@white, 0.3);
     color: rgba(0, 0, 0, 0.3);
   }
 }
 
 .tab-user .main-nav__link:focus {
-  outline: none;
   color: @pink;
+  outline: none;
 
   @media (min-width: @width-desktop) {
     box-shadow: 0 0 0 3px #ffffff,
       0 0 6px 6px @dark-blue;
-    color: @pink;
   }
 }
 
@@ -175,10 +165,6 @@
     opacity: 0.3;
   }
 }
-/*
-.main-nav--opened .main-nav__icon--open {
-  display: block;
-}*/
 
 .main-nav--close {
   .main-nav__icon--open {

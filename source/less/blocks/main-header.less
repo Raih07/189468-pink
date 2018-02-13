@@ -7,13 +7,11 @@
   &--open {
     margin-bottom: -67px;
     background-color: @dark-blue;
-    //background-color: red;
   }
 
   &--close {
     margin-bottom: -66px;
     background-color: rgba(0, 0, 0, 0.3);
-    //background-color: red;
   }
 
   @media (min-width: @width-tablets) {
@@ -36,6 +34,7 @@
     }
   }
 }
+
 /***no--js***/
 .main-header--nojs {
   margin-bottom: -67px;
@@ -53,9 +52,13 @@
 /***************************/
 
 .main-header__wrapper {
-  //position: relative;
-  //.set-container();//наверно можно удалить
-  //.container();
+  position: relative;
+
+  /*
+  @media (min-width: @width-tablets) {
+    width: 660px;
+    margin: 0 auto;
+  }*/
 
   @media (min-width: @width-desktop) {
     width: 940px;
