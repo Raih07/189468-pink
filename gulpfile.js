@@ -6,20 +6,24 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
-
 var imagemin = require("gulp-imagemin");
-
 var webp = require("gulp-webp");
-
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-
 var run = require("run-sequence");
 var del = require("del");
+var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
+
+gulp.task("minjs", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -51,6 +55,10 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
      ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
@@ -61,7 +69,7 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**"
+    "source/js/picturefill.min.js"
   ], {
     base: "source"
   })
@@ -75,7 +83,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -101,6 +109,7 @@ gulp.task("build", function(done) {
     "images",
     "webp",
     "copy",
+    "minjs",
     "style",
     "sprite",
     "html",
