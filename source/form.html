@@ -56,7 +56,7 @@
           <p class="questionnaire__description-note">&nbsp;Пожалуйста, заполните форму ниже:</p>
         </div>
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="questionnaire__col questionnaire__col--name">
+          <div class="questionnaire__col questionnaire__col--name">
             <div class="questionnaire__group questionnaire__group--name">
               <label class="questionnaire__text-label questionnaire__text-label--name" for="surname">Фамилия:</label>
               <input class="questionnaire__field" type="text" id="surname" placeholder="Укажите фамилию *">
@@ -69,11 +69,11 @@
               <label class="questionnaire__text-label questionnaire__text-label--name" for="patronymic">Отчество:</label>
               <input class="questionnaire__field" type="text" id="patronymic" placeholder="Ну и отчество тоже">
             </div>
-          </fieldset>
-          <fieldset class="questionnaire__col questionnaire__col--achiev">
-            <legend class="questionnaire__item-tittle questionnaire__item-tittle--achiev" align="center">
+          </div>
+          <div class="questionnaire__col questionnaire__col--achiev">
+            <h3 class="questionnaire__item-tittle questionnaire__item-tittle--achiev">
               Ваши безбашенные достижения в путешествии
-            </legend>
+            </h3>
             <ul class="questionnaire__list">
                 <li class="questionnaire__option">
                   <input class="questionnaire-input questionnaire-input-checkbox visually-hidden" id="check-shark" name="shark" type="checkbox" checked>
@@ -100,11 +100,12 @@
                   <label class="questionnaire__label" for="check-destrhotel">Разгромил отель</label>
                 </li>
             </ul>
-          </fieldset>
-          <fieldset class="questionnaire__col questionnaire__col--contacts">
-            <legend class="questionnaire__item-tittle questionnaire__item-tittle--contacts" align="center">
+          </div>
+          <div class="questionnaire__col questionnaire__col--contacts">
+            <h3 class="questionnaire__item-tittle questionnaire__item-tittle--contacts">
               Контактная информация
-            </legend>
+            </h3>
+            <div></div>
             <div class="questionnaire__group questionnaire__group--contact questionnaire__group--phone-icon">
               <label class="questionnaire__text-label questionnaire__text-label--contact" for="tel">Номер телефона</label>
               <input class="questionnaire__field" type="tel" id="tel" placeholder="Номер, пожалуйста">
@@ -113,11 +114,11 @@
               <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">Aдрес почты</label>
               <input class="questionnaire__field" type="email" id="mail" placeholder="Введите почту *">
             </div>
-          </fieldset>
-          <fieldset class="questionnaire__col questionnaire__col--apps">
-            <legend class="questionnaire__item-tittle questionnaire__item-tittle--apps" align="center">
+          </div>
+          <div class="questionnaire__col questionnaire__col--apps">
+            <h3 class="questionnaire__item-tittle questionnaire__item-tittle--apps">
               С каким приложением путешествовали?
-            </legend>
+            </h3>
             <ul class="questionnaire__list">
               <li class="questionnaire__option">
                 <input class="questionnaire-input questionnaire-input-radio visually-hidden" id="radio-shark" name="app" value="iOS" type="radio" checked>
@@ -132,15 +133,15 @@
                 <label class="questionnaire__label" for="radio-chucknorris">Windows Phone</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="questionnaire__col questionnaire__col--feeling">
-            <legend class="questionnaire__item-tittle questionnaire__item-tittle--feeling" align="center">
+          </div>
+          <div class="questionnaire__col questionnaire__col--feeling">
+            <h3 class="questionnaire__item-tittle questionnaire__item-tittle--feeling">
               Опишите свои эмоции
-            </legend>
+            </h3>
             <div class="questionnaire__group">
               <textarea class="questionnaire__area" name="emotions" id="emotions-message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
-          </fieldset>
+          </div>
           <div class="questionnaire__bottom">
             <button class="questionnaire__btn btn btn--square" type="submit">Отправить форму</button>
             <p class="questionnaire__legend">

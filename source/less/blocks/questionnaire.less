@@ -51,13 +51,12 @@
   }
 }
 
-
 .questionnaire__form {
   display: flex;
   flex-direction: column;
 
   @media (min-width: @width-tablets) {
-    padding-top: 36px;
+    padding-top: 71px;
   }
 
   @media (min-width: @width-desktop) {
@@ -65,23 +64,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 64px;
+    padding-top: 77px;
   }
 }
 
 .questionnaire__col {
   box-sizing: border-box;
-  .mar-pad-reset();
   padding-top: 34px;
-  padding-bottom: 24px;
+  padding-bottom: 42px;
   .container();
-  border: none;
 
   @media (min-width: @width-tablets) {
-    padding-top: 35px;
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 52px;
+    margin-bottom: 65px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -89,30 +86,31 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin-bottom: 48px;
+    margin-bottom: 65px;
   }
 
   &--name {
     background-color: @white;
 
     @media (min-width: @width-tablets) {
-      padding-bottom: 0;
+      padding-bottom: 1px;
       order: 0;
     }
 
     @media (min-width: @width-desktop) {
       width: 435px;
-      padding-top: 20px;
+      padding-top: 7px;
+      padding-bottom: 0;
     }
   }
 
   &--achiev {
-    padding-top: 99px;
+    padding-top: 38px;
     padding-bottom: 47px;
     background-color: @gray-white;
 
     @media (min-width: @width-tablets) {
-      padding-top: 41px;
+      padding-top: 0;
       padding-left: 58px;
       padding-right: 58px;
       padding-bottom: 53px;
@@ -123,11 +121,10 @@
 
     @media (min-width: @width-desktop) {
       width: 100%;
-      margin-top: 3px;
-      padding-top: 35px;
       padding-bottom: 15px;
       padding-left: 39px;
       padding-right: 39px;
+      margin-bottom: 62px;
     }
   }
 
@@ -136,7 +133,7 @@
     background-color: @white;
 
     @media (min-width: @width-tablets) {
-      padding-top: 30px;
+      padding-top: 0;
       padding-left: 58px;
       padding-right: 58px;
       padding-bottom: 26px;
@@ -146,18 +143,18 @@
 
     @media (min-width: @width-desktop) {
       width: 100%;
-      padding-top: 29px;
-      padding-bottom: 13px;//12
+      padding-bottom: 13px;
+      margin-bottom: 65px;
     }
   }
 
   &--apps {
-    padding-top: 95px;
+    padding-top: 38px;
     padding-bottom: 47px;
     background-color: @gray-white;
 
     @media (min-width: @width-tablets) {
-      padding-top: 42px;
+      padding-top: 0;//42
       padding-left: 58px;
       padding-right: 58px;
       padding-bottom: 59px;
@@ -168,22 +165,23 @@
 
     @media (min-width: @width-desktop) {
       width: 435px;
-      padding-top: 38px;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 54px;
+      padding-bottom: 53px;
     }
   }
 
   &--feeling {
-    padding-top: 54px;
+    padding-top: 38px;
+    padding-bottom: 24px;
     background-color: @white;
 
     @media (min-width: @width-tablets) {
-      padding-top: 30px;
+      padding-top: 0;
       padding-left: 58px;
       padding-right: 58px;
       padding-bottom: 44px;
+      margin-bottom: 0;
       border: 2px solid @dark-gray;
       order: 4;
     }
@@ -191,46 +189,61 @@
     @media (min-width: @width-desktop) {
       width: 100%;
       margin-top: 3px;
-      padding-top: 28px;
       padding-bottom: 36px;
     }
   }
 }
 
 .questionnaire__item-tittle {
+  margin: 0;
+  margin-bottom: 43px;
   padding: 0 20px;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   color: @pink;
-  margin-left: auto;
-  margin-right: auto;
 
   &--achiev {
-    position: relative;
-    top: 56px;
-
     @media (min-width: @width-tablets) {
+      top: -16px;
+      margin-bottom: 26px;
       padding: 0 32px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 19px;
     }
   }
 
   &--apps {
-    position: relative;
-    top: 56px;
+    margin-bottom: 39px;
 
     @media (min-width: @width-tablets) {
+      top: -16px;
+      margin-bottom: 26px;
       padding: 0 25px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: -15px;
+      margin-bottom: 23px;
+      padding: 0 26px;
     }
   }
 
   &--feeling {
-    position: relative;
-    top: 38px;
+    margin-bottom: 16px;
 
     @media (min-width: @width-tablets) {
+      top: -16px;
+      margin-bottom: 15px;
       padding: 0 38px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 12px;
     }
   }
 
@@ -239,13 +252,24 @@
 
     @media (min-width: @width-tablets) {
       display: block;
-      padding: 0 31px;
+      top: -16px;
+      margin-bottom: 15px;
+      padding: 0 32px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 12px;
     }
   }
 
   @media (min-width: @width-tablets) {
-    position: static;
+    position: relative;
+    left: 49.9%;
+    display: inline-block;
+    max-width: 540px;
     line-height: 30px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
   }
 }
 
@@ -265,6 +289,10 @@
 
     @media (min-width: @width-desktop) {
       margin-bottom: 54px;
+
+      &:last-child {
+        margin-top: -2px;
+      }
     }
   }
 
@@ -283,7 +311,7 @@
     @media (min-width: @width-desktop) {
       display: inline-flex;
       width: 375px;
-      margin-right: 70px;//66
+      margin-right: 70px;
       margin-bottom: 0;
 
       &:last-child {
@@ -603,7 +631,6 @@
 }
 
 .questionnaire__star-symbol {
-  //vertical-align: top;
   top: 0;
   font-size: 14.5px;
   color: @pink;
