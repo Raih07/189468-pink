@@ -101,6 +101,7 @@ gulp.task("serve", function() {
 
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/js/*.js", ["minjs"]);
 });
 
 gulp.task("build", function(done) {

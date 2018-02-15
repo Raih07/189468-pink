@@ -59,15 +59,15 @@
           <fieldset class="questionnaire__col questionnaire__col--name">
             <div class="questionnaire__group questionnaire__group--name">
               <label class="questionnaire__text-label questionnaire__text-label--name" for="surname">Фамилия:</label>
-              <input class="questionnaire__field" type="text" id="surname" placeholder="Укажите фамилию *">
+              <input class="questionnaire__field" type="text" name="fam" id="surname" placeholder="Укажите фамилию *">
             </div>
             <div class="questionnaire__group questionnaire__group--name">
               <label class="questionnaire__text-label questionnaire__text-label--name" for="name">Имя:</label>
-              <input class="questionnaire__field" type="text" id="name" placeholder="Введите ваше имя *">
+              <input class="questionnaire__field" type="text" name="name" id="first_name" placeholder="Введите ваше имя *">
             </div>
             <div class="questionnaire__group questionnaire__group--name">
               <label class="questionnaire__text-label questionnaire__text-label--name" for="patronymic">Отчество:</label>
-              <input class="questionnaire__field" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+              <input class="questionnaire__field" type="text" name="second_name" id="patronymic" placeholder="Ну и отчество тоже">
             </div>
           </fieldset>
           <fieldset class="questionnaire__col questionnaire__col--achiev">
@@ -108,11 +108,11 @@
             <div>
               <div class="questionnaire__group questionnaire__group--contact questionnaire__group--phone-icon">
                 <label class="questionnaire__text-label questionnaire__text-label--contact" for="tel">Номер телефона</label>
-                <input class="questionnaire__field" type="tel" id="tel" placeholder="Номер, пожалуйста">
+                <input class="questionnaire__field" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
               </div>
               <div class="questionnaire__group questionnaire__group--contact questionnaire__group--mail-icon">
                 <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">Aдрес почты</label>
-                <input class="questionnaire__field" type="email" id="mail" placeholder="Введите почту *">
+                <input class="questionnaire__field" type="email" name="email" id="mail" placeholder="Введите почту *">
               </div>
             </div>
           </fieldset>
@@ -172,7 +172,7 @@
         </a>
       </div>
     </footer>
-    <div class="popup popup--success popup--close">
+    <div class="popup popup--success popup--close" id="popup_success">
       <div class="popup__body popup__body--success">
         <p class="popup__tittle"><b>Ваша заявка отправлена</b></p>
         <p class="popup__text">
@@ -184,7 +184,7 @@
         <button class="popup__btn btn btn--square" type="button">Закрыть окно</button>
       </div>
     </div>
-    <div class="popup popup--error popup--close">
+    <div class="popup popup--error popup--close" id="popup_error">
       <div class="popup__body popup__body--error">
         <p class="popup__tittle"><b>Что-то пошло не так!</b></p>
         <p class="popup__text">
