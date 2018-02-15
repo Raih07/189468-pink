@@ -49,6 +49,52 @@ nav_toggle.addEventListener('click', function() {
   }*/
 });
 
+
+
+/*******Карта в подвале*********/
+
+if(document.getElementById('YMapsID')) {
+  ymaps.ready(init);
+  var myMap, myPlacemar;
+
+  function init() {
+
+    myMap = new ymaps.Map("YMapsID", {
+      center: [59.936280, 30.321076],
+      zoom: 16,
+      controls: [] //убираем все кнопки управления
+    });
+
+    myMap.behaviors.disable('scrollZoom'); //отключение зума скролом колесика
+    //myMap.behaviors.disable('drag');
+
+    myMap.controls.add('zoomControl', {
+      float: 'none'
+    });
+    myMap.controls.add('fullscreenControl', {
+      float: 'right'
+    });
+
+    myMap.controls.add('typeSelector', {
+      float: 'left',
+      // Переключатель слоев карты – второй слева.
+    });
+    myMap.controls.get('typeSelector').options.set('size', 'small');//принудительно выбран маленькой мконки
+
+    myPlacemark = new ymaps.Placemark([59.936280, 30.321076], {
+      hintContent: 'PINK',
+      balloonContent: '191186, Санкт-Петербург, Невский пр., д.20'
+    }, {
+      iconLayout: 'default#image', //изображение без доп текста
+      iconImageHref: 'img/icon-map-marker.svg',
+      iconImageSize: [36, 36],
+      iconImageOffset: [-10, -10] //смещение картинки
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+}
+
 /*******Открытии и закрытие попапов*******/
 
 var pop_sucs = document.getElementById('popup_success');
@@ -116,47 +162,3 @@ form_contest.addEventListener('submit', function (event) {
     event.preventDefault();
   }
 });
-
-/*******Карта в подвале*********/
-
-if(document.getElementById('YMapsID')) {
-  ymaps.ready(init);
-  var myMap, myPlacemar;
-
-  function init() {
-
-    myMap = new ymaps.Map("YMapsID", {
-      center: [59.936280, 30.321076],
-      zoom: 16,
-      controls: [] //убираем все кнопки управления
-    });
-
-    myMap.behaviors.disable('scrollZoom'); //отключение зума скролом колесика
-    //myMap.behaviors.disable('drag');
-
-    myMap.controls.add('zoomControl', {
-      float: 'none'
-    });
-    myMap.controls.add('fullscreenControl', {
-      float: 'right'
-    });
-
-    myMap.controls.add('typeSelector', {
-      float: 'left',
-      // Переключатель слоев карты – второй слева.
-    });
-    myMap.controls.get('typeSelector').options.set('size', 'small');//принудительно выбран маленькой мконки
-
-    myPlacemark = new ymaps.Placemark([59.936280, 30.321076], {
-      hintContent: 'PINK',
-      balloonContent: '191186, Санкт-Петербург, Невский пр., д.20'
-    }, {
-      iconLayout: 'default#image', //изображение без доп текста
-      iconImageHref: 'img/icon-map-marker.svg',
-      iconImageSize: [36, 36],
-      iconImageOffset: [-10, -10] //смещение картинки
-    });
-
-    myMap.geoObjects.add(myPlacemark);
-  }
-}

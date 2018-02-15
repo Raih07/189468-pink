@@ -274,19 +274,20 @@
   }
 }
 
-.price__item-name {
+.price__item-name,
+.price__item-name-cell {
   font-size: 14px;
   line-height: 30px;
   color: @dark-blue;
 
-  &--cell {
-    @media (min-width: @width-tablets) {
-      display: none;
-    }
-  }
-
   @media (min-width: @width-desktop) {
     font-size: 18px;
+  }
+}
+
+.price__item-name-cell {
+  @media (min-width: @width-tablets) {
+    display: none;
   }
 }
 
