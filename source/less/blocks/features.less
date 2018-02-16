@@ -386,10 +386,11 @@
   color: @pink;
 
   @media (min-width: @width-tablets) {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
     line-height: 14px;
-    border-bottom: 1px solid @pink;
+    //border-bottom: 1px solid @pink;
+    background: linear-gradient(to bottom, transparent 0%, transparent 90%, @pink 90%, @pink 95%, transparent 95%, transparent 100%);
   }
 
   @media (min-width: @width-desktop) {
@@ -402,7 +403,7 @@
     opacity: 0.5;
 
     @media (min-width: @width-tablets) {
-      border-color: rgba(147, 154, 162, 0.5);
+      background: linear-gradient(to bottom, transparent 0%, transparent 90%, #8d949b 90%, #8d949b 95%, transparent 95%, transparent 100%);
     }
   }
 
