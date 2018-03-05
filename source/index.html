@@ -123,9 +123,9 @@
             <button class="reviews__btn reviews__btn--next" type="button" aria-label="Следующий отзыв"></button>
           </div>
           <div class="reviews__toggles slider__toggles">
-            <button class="slider__btn slider__btn--active" type="button" aria-label="Первый отзыв"></button>
-            <button class="slider__btn" type="button" aria-label="Второй отзыв"></button>
-            <button class="slider__btn" type="button" aria-label="Третий отзыв"></button>
+            <button class="slider__btn slider__btn--active" data-slide="1" type="button" aria-label="Первый отзыв"></button>
+            <button class="slider__btn" data-slide="2" type="button" aria-label="Второй отзыв"></button>
+            <button class="slider__btn" data-slide="3" type="button" aria-label="Третий отзыв"></button>
           </div>
         </div>
       </section>
@@ -193,9 +193,9 @@
             </tr>
           </table>
           <div class="price__toggles slider__toggles">
-            <button class="slider__btn" type="button" aria-label="Первая цена"></button>
-            <button class="slider__btn slider__btn--active" type="button" aria-label="Вторая цена"></button>
-            <button class="slider__btn" type="button" aria-label="Третья цена"></button>
+            <button class="slider__btn" data-slide="1" type="button" aria-label="Первая цена"></button>
+            <button class="slider__btn slider__btn--active" data-slide="2" type="button" aria-label="Вторая цена"></button>
+            <button class="slider__btn" type="button" data-slide="3" aria-label="Третья цена"></button>
           </div>
         </div>
       </section>
@@ -248,6 +248,8 @@
       </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

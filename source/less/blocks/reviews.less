@@ -28,33 +28,55 @@
 }
 
 .reviews__wrapper {
-  .container();
-  .set-container();
-}
+  width: 86.84%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 
-.reviews__list {
+  @media (min-width: @width-tablets) {
+    width: 620px;
+  }
+
   @media (min-width: @width-desktop) {
     position: relative;
+    width: 940px;
   }
 }
 
+.reviews__list {
+  /*
+  @media (min-width: @width-desktop) {
+    position: relative;
+  }*/
+  display: flex;
+  width: 300%;
+  transition: transform .5s;
+}
+
 .reviews__item {
-  display: none;
+  //display: none;
   .mar-pad-reset();
   text-align: center;
 
   &--active {
-    display: block;
+    //display: block;
   }
 
   @media (min-width: @width-tablets) {
+    /*
     &--active {
       display: flex;
       flex-direction: column;
-    }
+    }*/
+
+    display: flex;
+    flex-direction: column;
+
+    width: 620px;
   }
 
   @media (min-width: @width-desktop) {
+    width: 940px;
     padding-left: 120px;
     padding-right: 120px;
   }

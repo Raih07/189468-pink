@@ -49,7 +49,130 @@ nav_toggle.addEventListener('click', function() {
   }*/
 });
 
+/*******Слайдер отзывов*********/
 
+var slider_btns = document.getElementsByClassName("reviews__toggles")[0];
+var slider_list = document.getElementsByClassName("slider__list")[0];
+var reviews_wrapper = document.getElementsByClassName("reviews__wrapper")[0];
+var rev_prev = document.getElementsByClassName("reviews__btn--prev")[0];
+var rev_next = document.getElementsByClassName("reviews__btn--next")[0];
+
+function deselectAll(items) {
+  for (var i = 0; i < items.children.length; i++) {
+    items.children[i].classList.remove('slider__btn--active');
+  }
+}
+
+slider_btns.onclick = function(event) {
+  var target = event.target;
+  switch(target.dataset.slide) {
+    case '1':
+      slider_list.style.transform = 'translateX(0)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+    case '2':
+      slider_list.style.transform = 'translateX(-' + reviews_wrapper.offsetWidth + 'px)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+    case '3':
+      slider_list.style.transform = 'translateX(-' + 2*reviews_wrapper.offsetWidth + 'px)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+  }
+}
+
+$('.slider__list').swipe( {
+  swipeLeft: leftSwipeRev,
+  swipeRight: rightSwipeRev,
+  threshold: 0
+});
+var swipe_count_rev = 0;
+function leftSwipeRev(){
+  if (swipe_count_rev < 2) {
+    swipe_count_rev++;
+    slider_list.style.transform = 'translateX(-' + swipe_count_rev * reviews_wrapper.offsetWidth + 'px)';
+    deselectAll(slider_btns);
+    slider_btns.children[swipe_count_rev].classList.add('slider__btn--active');
+  }
+}
+function rightSwipeRev(){
+  if (swipe_count_rev > 0) {
+    swipe_count_rev--;
+    slider_list.style.transform = 'translateX(-' + swipe_count_rev * reviews_wrapper.offsetWidth + 'px)';
+    deselectAll(slider_btns);
+    slider_btns.children[swipe_count_rev].classList.add('slider__btn--active');
+  }
+}
+
+/**десктоп**/
+var slide_count = 0;
+
+rev_next.onclick = function() {
+  if (slide_count < 2) {
+    slide_count++;
+    slider_list.style.transform = 'translateX(-' + slide_count * reviews_wrapper.offsetWidth + 'px)';
+  }
+}
+
+rev_prev.onclick = function() {
+  if (slide_count > 0) {
+    slide_count--;
+    slider_list.style.transform = 'translateX(-' + slide_count * reviews_wrapper.offsetWidth + 'px)';
+  }
+}
+
+/*******Слайдер прайс-листа*********/
+
+var price_btns = document.getElementsByClassName("price__toggles")[0];
+var price_list = document.getElementsByClassName("price__list")[0];
+var price_wrapper = document.getElementsByClassName("price__wrapper")[0];
+
+price_btns.onclick = function(event) {
+  var target = event.target;
+  switch(target.dataset.slide) {
+    case '1':
+      price_list.style.transform = 'translateX(0)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+    case '2':
+      price_list.style.transform = 'translateX(-' + 1 * 30.9 + '%)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+    case '3':
+      price_list.style.transform = 'translateX(-' + 2 * 30.9 + '%)';
+      deselectAll(this);
+      target.classList.add('slider__btn--active');
+      break;
+  }
+}
+
+$(".price__list").swipe( {
+  swipeLeft: leftSwipePrice,
+  swipeRight: rightSwipePrice,
+  threshold: 0
+});
+var swipe_count_price = 0;
+function leftSwipePrice(){
+  if (swipe_count_price < 2) {
+    swipe_count_price++;
+    price_list.style.transform = 'translateX(-' + swipe_count_price * 30.9 + '%)';
+    deselectAll(price_btns);
+    price_btns.children[swipe_count_price].classList.add('slider__btn--active');
+  }
+}
+function rightSwipePrice(){
+  if (swipe_count_price > 0) {
+    swipe_count_price--;
+    price_list.style.transform = 'translateX(-' + swipe_count_price * 30.9 + '%)';
+    deselectAll(price_btns);
+    price_btns.children[swipe_count_price].classList.add('slider__btn--active');
+  }
+}
 
 /*******Карта в подвале*********/
 
