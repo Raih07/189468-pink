@@ -8,7 +8,6 @@
 }
 
 .photo-editor__form {
-
   padding-top: 20px;
   padding-bottom: 41px;
 
@@ -34,7 +33,9 @@
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  .container();
+  width: 280px;
+  overflow: hidden;
+  background-color: #e2e2e2;
 
   img {
     display: block;
@@ -44,6 +45,7 @@
   @media (min-width: @width-tablets) {
     margin: 0;
     padding: 0;
+    width: 300px;
   }
 }
 
@@ -144,16 +146,22 @@
     transform: translate(-50%, -50%);
     fill: @dark-blue;
     opacity: 0.3;
+
+    @media (min-width: @width-tablets) {
+      fill: @pink;
+      opacity: 1;
+    }
   }
 
   &:hover svg {
     opacity: 0.5;
   }
 
+  /*
   &--active svg {
     fill: @pink;
     opacity: 1;
-  }
+  }*/
 
   &--crop svg {
     width: 48px;
@@ -209,6 +217,13 @@
   }
 }
 
+.photo-editor__control--active {
+  svg {
+    fill: @pink;
+    opacity: 1;
+  }
+}
+
 @media (min-width: @width-tablets) {
   .photo-editor__btn svg {
     fill: @pink;
@@ -218,31 +233,56 @@
 
 .photo-editor__bar {
   display: none;
-  position: relative;
+  position: absolute;
   height: 2px;
   background-color: @dark-blue;
 
+  /*
   &--active {
     position: absolute;
     left: 12%;
     right: 13%;
     bottom: 34px;
     display: block;
-  }
+  }*/
 
   @media (min-width: @width-tablets) {
+    /*
     &--active {
       position: relative;
       left: auto;
       bottom: auto;
       right: auto;
       width: 100%;
-    }
+    }*/
 
     &--saturate,
     &--bright,
     &--crop {
+      position: relative;
       display: block;
+      width: 100%;
+    }
+  }
+}
+
+.photo-editor__control--active {
+  .photo-editor__bar {
+    position: absolute;
+    left: 12%;
+    right: 13%;
+    bottom: 34px;
+    display: block;
+  }
+}
+
+@media (min-width: @width-tablets) {
+  .photo-editor__control--active {
+    .photo-editor__bar {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      right: auto;
       width: 100%;
     }
   }
@@ -263,43 +303,44 @@
   cursor: pointer;
   outline: none;
 
-  &:focus {
+  &:focus,
+  &:active {
     background-color: @pink;
   }
 
   &--crop {
-    left: 80.3%;
+    left: 0%;  //80.3%
 
     @media (min-width: @width-tablets) {
-      left: 72.5%;
+      left: 0%;  //72.5%
     }
 
     @media (min-width: @width-desktop) {
-      left: 24.5%;
+      left: 0%;  //24.5%
     }
   }
 
   &--saturate {
-    left: 80.3%;
+    left: 50%%; //80.3%
 
     @media (min-width: @width-tablets) {
-      left: 12.5%;
+      left: 50%;  //12.5%
     }
 
     @media (min-width: @width-desktop) {
-      left: 85.7%;
+      left: 50%;  //85.7%
     }
   }
 
   &--bright {
-    left: 80.3%;
+    left: 50%;  //80.3%
 
     @media (min-width: @width-tablets) {
-      left: 47.5%;
+      left: 50%;  //47.5%
     }
 
     @media (min-width: @width-desktop) {
-      left: 55.5%;
+      left: 50%;  //55.5%
     }
   }
 }

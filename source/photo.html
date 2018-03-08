@@ -253,7 +253,7 @@
                 <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
                 <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-                <img class="photo-editor__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
+                <img class="photo-editor__img" id="editor_img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
               </picture>
             </div>
             <div class="photo-editor__body">
@@ -265,18 +265,18 @@
                       <use xlink:href="#sprite-icon-editor-crop"></use>
                     </svg>
                   </button>
-                  <div class="photo-editor__bar photo-editor__bar--crop photo-editor__bar--active">
+                  <div class="photo-editor__bar photo-editor__bar--crop photo-editor__bar--active" id="crop">
                     <button class="photo-editor__thumb photo-editor__thumb--crop" id="thumb_btn_crop" type="button" aria-label="Ползунок кадрирования"></button>
                   </div>
                 </div>
                 <!--**Насыщеноость**-->
-                <div class="photo-editor__control photo-editor__control--saturate">
+                <div class="photo-editor__control photo-editor__control--saturate photo-editor__control--active">
                   <button class="photo-editor__btn photo-editor__btn--saturate" type="button" aria-label="Насыщенность фотографии">
                     <svg version="1.0" x="0px" y="0px" width="48" height="48" enable-background="new 0 0 48 48" xml:space="preserve">
                       <use xlink:href="#sprite-icon-editor-fill"></use>
                     </svg>
                   </button>
-                  <div class="photo-editor__bar photo-editor__bar--saturate">
+                  <div class="photo-editor__bar photo-editor__bar--saturate" id="saturate">
                     <button class="photo-editor__thumb photo-editor__thumb--saturate" id="thumb_btn_satur" type="button" aria-label="Ползунок насыщенности"></button>
                   </div>
                 </div>
@@ -287,7 +287,7 @@
                       <use xlink:href="#sprite-icon-editor-contrast"></use>
                     </svg>
                   </button>
-                  <div class="photo-editor__bar photo-editor__bar--bright">
+                  <div class="photo-editor__bar photo-editor__bar--bright" id="bright">
                     <button class="photo-editor__thumb photo-editor__thumb--bright" id="thumb_btn_bright" type="button" aria-label="Ползунок яркости"></button>
                   </div>
                 </div>

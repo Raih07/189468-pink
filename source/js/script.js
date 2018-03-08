@@ -50,12 +50,12 @@ nav_toggle.addEventListener('click', function() {
 });
 
 /*******Слайдер отзывов*********/
-
-var slider_btns = document.getElementsByClassName("reviews__toggles")[0];
-var slider_list = document.getElementsByClassName("slider__list")[0];
-var reviews_wrapper = document.getElementsByClassName("reviews__wrapper")[0];
-var rev_prev = document.getElementsByClassName("reviews__btn--prev")[0];
-var rev_next = document.getElementsByClassName("reviews__btn--next")[0];
+/*
+var slider_btns = document.getElementsByClassName('reviews__toggles')[0];
+var slider_list = document.getElementsByClassName('slider__list')[0];
+var reviews_wrapper = document.getElementsByClassName('reviews__wrapper')[0];
+var rev_prev = document.getElementsByClassName('reviews__btn--prev')[0];
+var rev_next = document.getElementsByClassName('reviews__btn--next')[0];
 
 function deselectAll(items) {
   for (var i = 0; i < items.children.length; i++) {
@@ -106,8 +106,9 @@ function rightSwipeRev(){
     slider_btns.children[swipe_count_rev].classList.add('slider__btn--active');
   }
 }
-
+*/
 /**десктоп**/
+/*
 var slide_count = 0;
 
 rev_next.onclick = function() {
@@ -123,9 +124,9 @@ rev_prev.onclick = function() {
     slider_list.style.transform = 'translateX(-' + slide_count * reviews_wrapper.offsetWidth + 'px)';
   }
 }
-
+*/
 /*******Слайдер прайс-листа*********/
-
+/*
 var price_btns = document.getElementsByClassName("price__toggles")[0];
 var price_list = document.getElementsByClassName("price__list")[0];
 var price_wrapper = document.getElementsByClassName("price__wrapper")[0];
@@ -173,9 +174,9 @@ function rightSwipePrice(){
     price_btns.children[swipe_count_price].classList.add('slider__btn--active');
   }
 }
-
+*/
 /*******Карта в подвале*********/
-
+/*
 if(document.getElementById('YMapsID')) {
   ymaps.ready(init);
   var myMap, myPlacemar;
@@ -217,9 +218,9 @@ if(document.getElementById('YMapsID')) {
     myMap.geoObjects.add(myPlacemark);
   }
 }
-
+*/
 /*******Открытии и закрытие попапов*******/
-
+/*
 var pop_sucs = document.getElementById('popup_success');
 var pop_err = document.getElementById('popup_error');
 var form_contest= document.getElementsByClassName("questionnaire__form")[0];
@@ -285,3 +286,259 @@ form_contest.addEventListener('submit', function (event) {
     event.preventDefault();
   }
 });
+*/
+/*******Фото-редактор*******/
+
+var edit_img_box = document.getElementsByClassName('photo-editor__picture')[0];
+var edit_img = document.getElementById('editor_img');
+var sliderCrop = document.getElementById('crop');
+var sliderSaturate = document.getElementById('saturate');
+var sliderBright = document.getElementById('bright');
+var bright, satur;
+var transform_crop;
+var crop_change = false;
+
+var crop_slide = new Slider({
+  elem: sliderCrop,
+  filter: 'crop',
+  max: 500
+});
+
+var saturate_slide = new Slider({
+  elem: sliderSaturate,
+  filter: 'saturate',
+  max: 200
+});
+
+var bright_slide = new Slider({
+  elem: sliderBright,
+  filter: 'bright',
+  max: 200
+});
+
+document.addEventListener('crop', function(event) {
+  Crop(edit_img, event.detail.pos);
+  if (event.detail.pos > 0) {
+    edit_img.addEventListener('mousedown', dragImage);
+    edit_img.addEventListener('touchstart', dragImage);
+  } else {
+    edit_img.removeEventListener('mousedown', dragImage);
+    edit_img.removeEventListener('touchstart', dragImage);
+  }
+  console.log('filt: ' + event.detail.filt_type + ' slide: ' + event.detail.pos);
+});
+
+document.addEventListener('bright', function(event) {
+  Bright(edit_img, event.detail.pos);
+  //bright = event.detail.pos;
+  //Filter(edit_img, bright, satur);
+  console.log('filt: ' + event.detail.filt_type + ' slide: ' + event.detail.pos);
+});
+
+document.addEventListener('saturate', function(event) {
+  Saturate(edit_img, event.detail.pos);
+  //satur = event.detail.pos;
+  //Filter(edit_img, bright, satur);
+  console.log('filt: ' + event.detail.filt_type + ' slide: ' + event.detail.pos);
+});
+
+function Filter(edit_img, bright, satur) {
+  bright = bright;
+  satur = satur;
+  edit_img.style.filter = 'brightness(' + bright + '%)' + ' saturate(' + satur + '%)';
+}
+
+function Bright(edit_img, data) {
+  edit_img.style.filter = 'brightness(' + data + '%)';
+  console.log('bright: ' + data + '%');
+}
+
+function Saturate(edit_img, data) {
+  edit_img.style.filter = 'saturate(' + data + '%)';
+  console.log('saturate: ' + data + '%');
+}
+
+function Crop(edit_img, data) {
+  data = (data + 100) / 100;
+  //edit_img.style.transform = 'scale(' + data + ') ' + 'translate(' + translateX + 'px,' + translateY + 'px)';
+  edit_img.style.transform = 'scale(' + data + ')';
+  //transform_crop = data;
+  console.log('crop ' + data);
+}
+
+function deselectAllFilter(items) {
+  for (var i = 0; i < items.children.length; i++) {
+    items.children[i].classList.remove('photo-editor__control--active');
+  }
+}
+
+var filter_control_list = document.getElementsByClassName('photo-editor__controls-list')[0];
+
+filter_control_list.onclick = function(event) {
+  var target = event.target;
+  console.log(target.tagName);
+  if (target.closest('.photo-editor__btn')) {
+    deselectAllFilter(this);
+    target.closest('.photo-editor__control').classList.add('photo-editor__control--active');
+  }
+  if (target.closest('.photo-editor__btn--crop')) {
+    edit_img.addEventListener('mousedown', dragImage);
+    edit_img.addEventListener('touchstart', dragImage);
+  } else {
+    edit_img.removeEventListener('mousedown', dragImage);
+    edit_img.removeEventListener('touchstart', dragImage);
+  }
+}
+
+var btn_cancel = document.getElementById('btn_cancel');
+btn_cancel.onclick = function() {
+  crop_slide.setValue(0);
+  saturate_slide.setValue(100);
+  bright_slide.setValue(100);
+}
+
+function Slider(options) {
+  var elem = options.elem;
+  var thumbElem = elem.querySelector('.photo-editor__thumb');
+
+  var max = options.max || 100;
+  var sliderCoords, thumbCoords, shiftX, pixelsPerValue;
+
+  elem.ondragstart = function() {
+    return false;
+  };
+
+  elem.ontouchstart = elem.onmousedown = function(event) {
+    console.log(event.target.className);
+    if (event.target.classList.contains('photo-editor__thumb')) {
+      var clientX = event.clientX || event.touches[0].clientX;
+      var clientY = event.clientY || event.touches[0].clientY;
+      pixelsPerValue = (elem.offsetWidth - thumbElem.offsetWidth) / max;
+      console.log('pixelsPerValue ' + pixelsPerValue);
+      startDrag(clientX, clientY);
+      return false;
+    }
+  }
+
+  function startDrag(startClientX, startClientY) {
+    thumbCoords = thumbElem.getBoundingClientRect();
+    sliderCoords = elem.getBoundingClientRect();
+
+    shiftX = startClientX - thumbCoords.left;
+
+    document.addEventListener('mousemove', onDocumentMouseMove);
+    document.addEventListener('mouseup', onDocumentMouseUp);
+
+    document.addEventListener('touchmove', onDocumentMouseMove);
+    document.addEventListener('touchend', onDocumentMouseUp);
+  }
+
+  function moveTo(clientX) {
+    var newLeft = clientX - shiftX - sliderCoords.left;
+
+    if (newLeft < 0) {
+      newLeft = 0;
+    }
+
+    var rightEdge = elem.offsetWidth - thumbElem.offsetWidth;
+    if (newLeft > rightEdge) {
+      newLeft = rightEdge;
+    }
+
+    thumbElem.style.left = newLeft + 'px';
+    setEvent(options.filter, newLeft);
+  }
+
+  function setEvent(events, data) {
+    elem.dispatchEvent(new CustomEvent(events, {
+      bubbles: true,
+      detail: { pos: positionToValue(data), filt_type: events }
+    }));
+  }
+
+  function positionToValue(left) {
+    return Math.round(left / pixelsPerValue);
+  }
+
+  function valueToPosition(value) {
+    return pixelsPerValue * value;
+  }
+
+  function onDocumentMouseMove(e) {
+    var clientX = e.clientX || e.touches[0].clientX;
+    moveTo(clientX);
+  }
+
+  function onDocumentMouseUp() {
+    endDrag();
+  }
+
+  function endDrag() {
+    document.removeEventListener('mousemove', onDocumentMouseMove);
+    document.removeEventListener('mouseup', onDocumentMouseUp);
+
+    document.removeEventListener('touchmove', onDocumentMouseMove);
+    document.removeEventListener('touchend', onDocumentMouseUp);
+  }
+
+  function setValue(value) {
+    var pos = valueToPosition(value);
+    thumbElem.style.left = pos + 'px';
+    setEvent(options.filter, pos);
+  }
+
+  this.setValue = setValue;
+}
+
+var translateX = 0;
+var translateY = 0;
+
+function dragImage(event) {
+
+  //var imgCoords = getCoords(edit_img);
+  //var imgBoxCoords = getCoords(edit_img_box);
+  //var imgCoords = edit_img.getBoundingClientRect();
+  //var imgBoxCoords = edit_img_box.getBoundingClientRect();
+
+  var clientX_start = event.clientX || event.touches[0].clientX;
+  var clientY_start = event.clientY || event.touches[0].clientY;
+
+  //var shiftX = clientX - imgCoords.left;
+  //var shiftY = clientY - imgCoords.top;
+  var newLeftImg, newTopImg;
+
+  document.ontouchmove = document.onmousemove = function(event) {
+    var clientX_end = event.clientX || event.touches[0].clientX;
+    var clientY_end = event.clientY || event.touches[0].clientY;
+
+    newLeftImg = translateX + clientX_end - clientX_start;
+    newTopImg = translateY + clientY_end - clientY_start;
+    //var newLeft = clientX - shiftX - imgBoxCoords.left;
+    //var newTop = clientY - shiftY - imgBoxCoords.top;
+
+    //edit_img.style.transform = 'scale(' + transform_crop + ') ' + 'translate(' + newLeftImg + 'px,' + newTopImg + 'px)';
+    edit_img.style.transform = 'translate(' + newLeftImg + 'px,' + newTopImg + 'px)';
+  }
+
+  document.ontouchend = document.onmouseup = function() {
+    translateX = newLeftImg;
+    translateY = newTopImg;
+    document.onmousemove = document.onmouseup = null;
+    document.ontouchmove = document.ontouchend = null;
+  };
+
+  //return false;
+  event.preventDefault();
+};
+
+edit_img.ondragstart = function() {
+  return false;
+};
+
+function getCoords(elem) {
+  var box = elem.getBoundingClientRect();
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
+  };
+}
