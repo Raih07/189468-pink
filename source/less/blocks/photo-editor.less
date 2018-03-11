@@ -222,6 +222,22 @@
     fill: @pink;
     opacity: 1;
   }
+
+  .photo-editor__bar {
+    position: absolute;
+    left: 12%;
+    right: 13%;
+    bottom: 34px;
+    display: block;
+
+    @media (min-width: @width-tablets) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+    }
+  }
 }
 
 @media (min-width: @width-tablets) {
@@ -267,6 +283,7 @@
   }
 }
 
+/*
 .photo-editor__control--active {
   .photo-editor__bar {
     position: absolute;
@@ -287,7 +304,7 @@
       width: 100%;
     }
   }
-}
+}*/
 
 .photo-editor__thumb {
   position: absolute;
@@ -323,7 +340,7 @@
   }
 
   &--saturate {
-    left: 50%%; //80.3%
+    left: 50%; //80.3%
 
     @media (min-width: @width-tablets) {
       left: 50%;  //12.5%

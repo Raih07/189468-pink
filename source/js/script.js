@@ -351,6 +351,24 @@ if (edit_img) {
     translateY = 0;
   }
 
+  //полифилл для включения CustomEvent в IE9+
+  try {
+    new CustomEvent("IE has CustomEvent, but doesn't support constructor");
+  } catch (e) {
+    window.CustomEvent = function (event, params) {
+      var evt;
+      params = params || {
+        bubbles: false,
+        cancelable: false,
+        detail: undefined
+      };
+      evt = document.createEvent("CustomEvent");
+      evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+      return evt;
+    };
+    CustomEvent.prototype = Object.create(window.Event.prototype);
+  }
+
   function Slider(options) {
     var elem = options.elem;
     var thumbElem = elem.querySelector('.photo-editor__thumb');
@@ -554,22 +572,19 @@ if (form_contest) {
     popup.classList.add('popup--close');
   }
 
-  if (form_contest) {
-    form_contest.addEventListener('submit', function (event) {
-      if (first_name.value == '' || second_name.value == '' ||email.value == '') {
-        showPopup(pop_err);
-        //console.log('error');
-        event.preventDefault();
-      }
-      else {
-        showPopup(pop_sucs, form_contest);
-        //console.log('suc');
-        localStorage.setItem('first_name', first_name.value);
-        localStorage.setItem('second_name', second_name.value);
-        localStorage.setItem('email', email.value);
-        event.preventDefault();
-      }
-    });
-  }
+  form_contest.addEventListener('submit', function (event) {
+    if (first_name.value == '' || second_name.value == '' ||email.value == '') {
+      showPopup(pop_err);
+      //console.log('error');
+      event.preventDefault();
+    }
+    else {
+      showPopup(pop_sucs, form_contest);
+      //console.log('suc');
+      localStorage.setItem('first_name', first_name.value);
+      localStorage.setItem('second_name', second_name.value);
+      localStorage.setItem('email', email.value);
+      event.preventDefault();
+    }
+  });
 }
-
