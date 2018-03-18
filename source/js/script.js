@@ -49,6 +49,29 @@ nav_toggle.addEventListener('click', function() {
   }*/
 });
 
+/*******Переключение преимуществ в планшете*********/
+
+var features_list = document.getElementsByClassName('features__list')[0];
+
+function deselectAllFilter(items) {
+  for (var i = 0; i < items.children.length; i++) {
+    items.children[i].classList.remove('features__item--active');
+  }
+}
+
+if (features_list) {
+  features_list.onclick = function(event) {
+    var target = event.target;
+    console.log(target.tagName);
+
+    if (target.closest('.features__item')) {
+      deselectAllFilter(this);
+      target.closest('.features__item').classList.add('features__item--active');
+    }
+  }
+}
+
+
 /*******Слайдер отзывов*********/
 
 var slider_btns = document.getElementsByClassName('reviews__toggles')[0];
